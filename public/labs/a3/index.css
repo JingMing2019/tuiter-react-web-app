@@ -2,7 +2,7 @@
 /*    background-color: blue;*/
 /*    color: white;*/
 /*}*/
-/*When using ID selectors, no need to specify the tag name, because ID is unique*/
+/* When using ID selectors, no need to specify the tag name, because ID is unique */
 p#id-selector-1 {
     background-color: red;
     color: white;
@@ -11,16 +11,19 @@ p#id-selector-2 {
     background-color: yellow;
     color: black;
 }
-/*When using class selectors, the style can be applied to different types of element*/
+/* When using class selectors, the style can be applied to different types of element */
 .class-selector {
     background-color: yellow;
     color: blue;
 }
-.selector-1 .selector-3 {
+/* Render selector-3 with red background color and white foreground color, and selector-3 follows below relationship*/
+.selector-1 .selector-3 { /* refers to .selector-3 as a descendant of .selector-1 */
     background-color: red;
     color: white;
 }
-.selector-2 > .selector-3 > .selector-4 {
+/* Render selector-4 which follows the below hierarchy*/
+.selector-2 > .selector-3 > .selector-4 { /* Refers to .selector-4 as a direct child of .selector-3 which is a direct
+child of .selector-2 */
     background-color: yellow;
     color: blue;
 }
