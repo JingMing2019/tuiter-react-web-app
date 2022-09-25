@@ -27,4 +27,24 @@ child of .selector-2 */
     background-color: yellow;
     color: blue;
 }
+/* Useful foreground colors in CSS format */
+.fg-color-black { color: black; }
+.fg-color-white { color: white; }
+.fg-color-blue { color: #7070ff; }
+.fg-color-red { color: #ff7070; }
+.fg-color-green { color: green; }
+.bg-color-yellow {
+    background-color: #ffff07;
+}
+/* Useful background colors in CSS format */
+.bg-color-blue {
+    background-color: #7070ff;
+}
+.bg-color-red {
+    background-color: #ff7070;
+}
+.bg-color-green {
+    background-color: green;
+}
+
 
