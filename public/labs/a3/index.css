@@ -1,4 +1,27 @@
-p {
-    background-color: blue;
+/*p {*/
+/*    background-color: blue;*/
+/*    color: white;*/
+/*}*/
+/*When using ID selectors, no need to specify the tag name, because ID is unique*/
+p#id-selector-1 {
+    background-color: red;
     color: white;
 }
+p#id-selector-2 {
+    background-color: yellow;
+    color: black;
+}
+/*When using class selectors, the style can be applied to different types of element*/
+.class-selector {
+    background-color: yellow;
+    color: blue;
+}
+.selector-1 .selector-3 {
+    background-color: red;
+    color: white;
+}
+.selector-2 > .selector-3 > .selector-4 {
+    background-color: yellow;
+    color: blue;
+}
+
