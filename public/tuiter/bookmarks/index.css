@@ -3,11 +3,14 @@
 }
 .wd-bookmarks-handle {
     font-size: 13px;
-    color: lightgrey;
+    color: lightgray;
     margin-bottom: 12px;
 }
+.wd-bookmarks-title-border-bottom {
+    border-bottom-color: lightgray;
+    border-bottom-style: solid;
+}
 .wd-bookmarks-border-bottom {
-    border-bottom-color: lightgrey;
     border-bottom-style: solid;
 }
 .wd-bookmarks-post-avatar {
@@ -27,9 +30,6 @@
 .wd-bookmarks-post-author {
     font-size: 15px;
 }
-.wd-bookmarks-post-author span {
-    color: lightgrey;
-}
 .wd-bookmarks-post-main-content {
     font-size: 15px;
     max-width: 506px;
@@ -40,7 +40,7 @@
     width: 504px;
     border-radius: 20px;
     border-width: 1px;
-    border-color: lightgrey;
+    border-color: lightgray;
     border-style: solid;
 }
 .wd-bookmarks-post-image-and-content img{
@@ -49,31 +49,22 @@
     overflow: hidden;
     border-radius: 20px 20px 0 0;
     border-width: 1px;
-    border-color: lightgrey;
+    border-color: lightgray;
     border-bottom-style: solid;
 }
-.wd-bookmarks-post-image-title {
+.wd-bookmarks-post-image-title-content {
     font-size: 15px;
     padding: 12px;
-}
-.wd-bookmarks-post-image-content {
-    font-size: 15px;
-    color: lightgray;
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 12px;
 }
 .wd-bookmarks-post-icon {
     width: 506px;
     padding-top: 12px;
-    padding-left: 0;
-    margin: 0;
+    display: flex;
+    justify-content: space-between;
 }
-.wd-bookmarks-post-icon li{
-    list-style-type: none;
-    display: inline-block;
-    float: left;
-    width: 25%;
+.wd-bookmarks-post-icon div{
+    flex-basis: 20%;
+    padding-bottom: 12px;
 }
 .wd-bookmarks-post-icon span {
     padding-left: 16px;
@@ -83,5 +74,5 @@
 }
 .wd-bookmarks-post-icon a {
     text-decoration: none;
-    color: lightgrey;
+    color: lightgray;
 }

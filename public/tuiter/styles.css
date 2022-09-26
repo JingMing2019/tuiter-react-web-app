@@ -23,3 +23,6 @@ body{
 .wd-margin-left {
     margin-left: 16px;
 }
+.wd-fg-color-light-gray {
+    color: lightgray;
+}

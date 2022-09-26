@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <link href="index.css" rel="stylesheet"/>
     <link href="../styles.css" rel="stylesheet" />
+    <link href="index.css" rel="stylesheet"/>
 </head>
 <body>
 
-    <div class="wd-border wd-bookmarks-border-bottom">
+    <div class="wd-border wd-bookmarks-title-border-bottom">
         <div class="wd-bookmarks-title wd-margin-left">Bookmarks</div>
         <div class="wd-bookmarks-handle wd-margin-left">@WebDev</div>
     </div>
 
     <div class="wd-border wd-bookmarks-border-bottom">
+<!--        Avatar on the left-->
         <div class="wd-bookmarks-post-avatar">
             <img src="../images/corgi.jpeg" alt="Post Avatar"/>
         </div>
-
+<!--        The other information is on the right-->
         <div class="wd-bookmarks-post-right">
             <div class="wd-bookmarks-post-author">
-                Lovely Corgi <span>@lovely_corgi &#183 Sep 25</span>
+                Lovely Corgi <span class="wd-fg-color-light-gray">@lovely_corgi &#183 Sep 25</span>
             </div>
 
             <div class="wd-bookmarks-post-main-content">
@@ -31,22 +32,24 @@
 
             <div class="wd-bookmarks-post-image-and-content">
                 <img src="../images/corgi5.jpeg" alt="Post Image"/>
-                <div class="wd-bookmarks-post-image-title"><b>Pembroke Welsh Corgi</b></div>
-                <div class="wd-bookmarks-post-image-content">
-                    The Pembroke Welsh Corgi is a cattle herding dog breed that originated in Pembrokeshire, Wales. It
-                    is one of two breeds known as a Welsh Corgi. Pembroke Welsh Corgis descended from the Spitz family
-                    of dogs.
+                <div class="wd-bookmarks-post-image-title-content">
+                    <b>Pembroke Welsh Corgi</b>
+                    <div class="wd-fg-color-light-gray">
+                        The Pembroke Welsh Corgi is a cattle herding dog breed that originated in Pembrokeshire, Wales. It
+                        is one of two breeds known as a Welsh Corgi. Pembroke Welsh Corgis descended from the Spitz family
+                        of dogs.
+                    </div>
                 </div>
             </div>
 
-            <ul class="wd-bookmarks-post-icon">
-                <li><a href="#">&#927<span>22</span></a><li>
-                <li><a href="#">&#8593<span>9</span></a></li>
-                <li><a href="#" class="wd-selected-icon">&#10084<span>37</span></a></li>
-                <li><a href="#">&#9993</a></li>
-            </ul>
-
+            <div class="wd-bookmarks-post-icon">
+                <div><a href="#">&#927<span>22</span></a></div>
+                <div><a href="#">&#8593<span>9</span></a></div>
+                <div><a href="#" class="wd-selected-icon">&#10084<span>37</span></a></div>
+                <div><a href="#">&#9993</a></div>
+            </div>
         </div>
+
         <div class="wd-float-done"></div>
     </div>
 
