@@ -1,15 +1,3 @@
-body{
-    font-family: "Apple Braille", system-ui;
-    background-color: black;
-    color: white;
-}
-.wd-border {
-    border-color: rgb(47, 51, 54);
-    border-top-style: solid;
-    border-left-style: solid;
-    border-right-style: solid;
-    padding-top: 12px;
-}
 .wd-search-field {
     color: white;
     background-color: darkgray;
@@ -84,16 +72,7 @@ body{
     margin-right: 16px;
     padding-bottom: 12px;
 }
-.wd-float-left{
-    float: left;
-}
-.wd-float-right{
-    float: right;
-}
-.wd-float-done {
-    clear: both;
-}
-.wd-margin-left {
-    margin-left: 16px;
+.wd-last-post{
+    border-bottom-style: solid;
 }
 
