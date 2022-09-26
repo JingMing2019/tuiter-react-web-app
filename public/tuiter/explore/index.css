@@ -1,0 +1,99 @@
+body{
+    font-family: "Apple Braille", system-ui;
+    background-color: black;
+    color: white;
+}
+.wd-border {
+    border-color: rgb(47, 51, 54);
+    border-top-style: solid;
+    border-left-style: solid;
+    border-right-style: solid;
+    padding-top: 12px;
+}
+.wd-search-field {
+    color: white;
+    background-color: darkgray;
+    border-radius: 30px;
+    border-width: 0;
+    width: 85%;
+    float: left;
+    padding-top: 3px;
+    padding-bottom: 3px;
+}
+.wd-gear {
+    color: rgb(29, 161, 242);
+    float: right;
+    text-decoration: none;
+    margin-right: 12px;
+}
+.wd-nav-tabs {
+    width: 100%;
+    color: rgb(110, 118, 125);
+    padding: 0;
+    margin: 0;
+}
+.wd-nav-tabs li {
+    font-size: 15px;
+    list-style-type: none;
+    display: inline-block;
+    padding: 16px;
+}
+.wd-nav-tabs .wd-selected {
+    color: rgb(29, 161, 242);
+}
+.wd-nav-tabs .wd-selected span {
+    padding-bottom: 12px;
+    border-bottom: solid rgb(29, 161, 242) 4px;
+}
+.wd-post-topic {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+    padding-bottom: 6px;
+}
+.wd-post-title {
+    font-size: 18px;
+    color: white;
+    padding-bottom: 6px;
+}
+.wd-post-number-tuits {
+    font-size: 13px;
+    color: rgb(110, 118, 125);
+    padding-bottom: 12px;
+}
+.wd-post-author-name {
+    font-size: 13px;
+    color: white;
+}
+.wd-post-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 10%;
+    position: relative;
+    overflow: hidden;
+}
+.wd-post-image img {
+    width: 100%;
+    height: auto;
+}
+.wd-post-float-left {
+    float: left;
+    width: 60%;
+}
+.wd-post-float-right{
+    float: right;
+    margin-right: 16px;
+    padding-bottom: 12px;
+}
+.wd-float-left{
+    float: left;
+}
+.wd-float-right{
+    float: right;
+}
+.wd-float-done {
+    clear: both;
+}
+.wd-margin-left {
+    margin-left: 16px;
+}
+
