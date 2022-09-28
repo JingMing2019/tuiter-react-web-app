@@ -24,32 +24,37 @@
     display: none;
 }
 .wd-nav-tabs {
+    font-size: 15px;
     width: 100%;
-    color: rgb(110, 118, 125);
     padding: 0;
     margin: 0;
 }
 .wd-nav-tabs li {
-    font-size: 15px;
     list-style-type: none;
     display: inline-block;
     padding: 16px;
 }
-.wd-nav-tabs .wd-selected {
-    color: rgb(29, 161, 242);
+.wd-nav-tabs a {
+    text-decoration: none;
+    color: rgb(110, 118, 125);
 }
-.wd-nav-tabs .wd-selected span {
+.wd-selected-icon {
     padding-bottom: 12px;
     border-bottom: solid rgb(29, 161, 242) 4px;
+    color: rgb(29, 161, 242);
 }
 .wd-post-topic {
-    font-size: 13px;
     color: rgb(110, 118, 125);
+    font-size: 13px;
+    padding-bottom: 6px;
+}
+.wd-post-topic-lightgray {
+    color: lightgray;
+    font-size: 13px;
     padding-bottom: 6px;
 }
 .wd-post-title {
     font-size: 18px;
-    color: white;
     padding-bottom: 6px;
 }
 .wd-post-number-tuits {
@@ -60,6 +65,7 @@
 .wd-post-author-name {
     font-size: 13px;
     color: white;
+    padding-bottom: 6px;
 }
 .wd-post-image {
     width: 100px;
@@ -74,7 +80,7 @@
 }
 .wd-post-float-left {
     float: left;
-    width: 60%;
+    width: 70%;
 }
 .wd-post-float-right{
     float: right;
