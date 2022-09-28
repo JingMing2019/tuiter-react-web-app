@@ -63,14 +63,17 @@
     justify-content: space-between;
 }
 .wd-bookmarks-post-icon div{
-    flex-basis: 20%;
+    flex-basis: 25%;
     padding-bottom: 12px;
 }
 .wd-bookmarks-post-icon span {
-    padding-left: 16px;
+    padding-left: 12px;
 }
 .wd-bookmarks-post-icon .wd-selected-icon {
     color: red;
+}
+.wd-bookmarks-post-icon .wd-large-icon {
+    font-size: 12px;
 }
 .wd-bookmarks-post-icon a {
     text-decoration: none;
