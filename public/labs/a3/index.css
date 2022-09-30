@@ -208,6 +208,13 @@ child of .selector-2 */
     background-color: red;
     color: white;
 }
+.rotate-list-counter-clockwise {
+    transform: rotate(-10deg);
+    width: 300px;
+    background-color: plum;
+    color: bisque;
+    margin-bottom: 40px;
+}
 .rotate-list-items li {
     width: 100px;
     text-align: right;
