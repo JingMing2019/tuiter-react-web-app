@@ -345,7 +345,7 @@ child of .selector-2 */
     from {
         position: relative;
         top: -200px;
-        font-size: 120%;
+        font-size: 140%;
         margin-left: 15%;
         width: 300px;
         height: 200px;
@@ -355,7 +355,7 @@ child of .selector-2 */
     30% {
         position: relative;
         top: -100px;
-        font-size: 110%;
+        font-size: 120%;
         margin-left: 25%;
         width: 300px;
         height: 200px;
@@ -365,7 +365,7 @@ child of .selector-2 */
     60% {
         position: relative;
         top: -50px;
-        font-size: 105%;
+        font-size: 110%;
         margin-left: 5%;
         width: 300px;
         height: 200px;
@@ -384,6 +384,11 @@ child of .selector-2 */
     }
 }
 .flex-container {
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+}
+.flex-container-flex {
     border-width: 5px;
     border-color: black;
     border-style: solid;
@@ -466,6 +471,81 @@ child of .selector-2 */
 .flex-container-even .flex-box {
     flex-basis: 100%;
 }
+@media (min-width: 0px)
+and (max-width: 600px) {
+    body {
+        background-color: yellow;
+    }
+    .media-query {
+        background-color: red;
+        color: white;
+    }
+    .media-query-div {
+        border: 4px brown solid;
+    }
+    .media-query-div h4 {
+        font-size: 24px;
+        background-color: darkslateblue;
+        color: floralwhite;
+    }
+    .media-query-div p {
+        font-size: 20px;
+        background-color: plum;
+        color: darkblue;
+    }
+}
+@media (min-width: 600px)
+and (max-width: 1200px) {
+    body {
+        background-color: blue;
+        color: white;
+    }
+    .media-query {
+        background-color: yellow;
+        color: black;
+    }
+    .media-query-div {
+        border: 10px firebrick solid;
+        padding: 16px;
+    }
+    .media-query-div h4 {
+        font-size: 18px;
+        background-color: mistyrose;
+        color: midnightblue;
+    }
+    .media-query-div p {
+        font-size: 16px;
+        background-color: palevioletred;
+        color: ivory;
+    }
+}
+@media (min-width: 1200px)
+and (max-width: 1800px) {
+    body {
+        background-color: red;
+        color: white;
+    }
+    .media-query {
+        background-color: blue;
+        color: white;
+    }
+    .media-query-div {
+        border: 12px lightpink solid;
+        border-radius: 10px;
+    }
+    .media-query-div h4 {
+        font-size: 20px;
+        background-color: honeydew;
+        color: rebeccapurple;
+    }
+    .media-query-div p {
+        font-size: 18px;
+        background-color: lemonchiffon;
+        color: royalblue;
+    }
+}
+
+
 
 
 
