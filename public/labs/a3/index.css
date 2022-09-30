@@ -235,9 +235,10 @@ child of .selector-2 */
 .rotate-image {
     transform: rotate(-10deg);
 }
-
 .rotate-image-example {
-    transform: rotate(10deg);
+    transform: rotate(20deg);
+    margin-top: 40px;
+    margin-bottom: 40px;
 }
 .rotate-table {
     position: relative;
