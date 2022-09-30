@@ -225,6 +225,10 @@ child of .selector-2 */
     transform: rotate(10deg);
     background-color: red;
 }
+.rotate-image {
+    transform: rotate(-10deg);
+}
+
 
 
 
