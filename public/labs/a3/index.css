@@ -246,6 +246,26 @@ child of .selector-2 */
     background-color: green;
     color: white;
 }
+.gradients-linear {
+    background: linear-gradient(lightpink, lightblue, blueviolet);
+    width: 200px;
+    height: 200px;
+}
+.gradients-radial {
+    background: radial-gradient(palevioletred, plum, bisque);
+    width: 200px;
+    height: 200px;
+}
+.gradients-positioned {
+    background:
+            radial-gradient(
+                    at left, lightseagreen, lightslategrey, navajowhite);
+    width: 200px;
+    height: 200px;
+    color: ivory;
+}
+
+
 
 
 
