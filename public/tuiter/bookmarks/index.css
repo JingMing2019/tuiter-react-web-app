@@ -7,10 +7,12 @@
     margin-bottom: 12px;
 }
 .wd-bookmarks-title-border-bottom {
+    width: 598px;
     border-bottom-color: lightgray;
     border-bottom-style: solid;
 }
 .wd-bookmarks-border-bottom {
+    max-width: 598px;
     border-bottom-style: solid;
 }
 .wd-bookmarks-post-avatar {
