@@ -1,3 +1,33 @@
+.wd-border {
+    border-color: rgb(57, 59, 61);
+    border-left-style: solid;
+    border-right-style: solid;
+    border-width: 1px;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.fas.wd-icon {
+    color: rgb(110, 118, 125);
+}
+.input-group .wd-search-field {
+    background-color: rgb(57, 59, 61);
+    border-style: none;
+    color: lightgray;
+}
+.fas.wd-cog {
+    color: white;
+    float: right;
+}
+.nav-link.wd-nav-link {
+    background-color: transparent;
+    color: rgb(110, 118, 125);
+    padding-left: 0;
+    padding-right: 0;
+}
+.nav-item.wd-active {
+    background-color: transparent;
+    border-bottom: solid rgb(29, 161, 242) 4px;
+}
 .fa-stack.wd-small {
     font-size: 0.5em;
 }

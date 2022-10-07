@@ -11,10 +11,10 @@
     <!-- Link to index.css style sheet, can override the library above -->
     <link href="explore.css" rel="stylesheet" />
 </head>
-<body>
+<body class="bg-black text-white">
 <!-- Explore Page -->
 <!-- Use pt-2 to add padding above the container -->
-<div class="container pt-2">
+<div class="container">
     <div class="row">
         <!-- LEFT: Navigation sidebar -->
         <div class="d-block col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
@@ -69,44 +69,47 @@
         <div class="d-block col-10 col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6">
             <!--        Part 1: Search Field -->
             <!--            align-items-center makes the cog stand at the center of the box -->
-            <div class="row align-items-center">
-                <div class="col-11">
+            <div class="row align-items-center pt-2 px-3 border border-secondary">
+                <div class="col-11 px-0">
                     <label for="search-tuiter" class="form-label w-100 mb-0">
                         <div class="input-group">
-                        <span class="input-group-text bg-transparent border-end-0 rounded-end rounded-pill">
-                            <i class="fas fa-search"></i>
-                        </span>
+                    <span class="input-group-text border-end-0 rounded-end rounded-pill wd-search-field">
+                        <i class="fas fa-search px-0 wd-icon"></i>
+                    </span>
                             <input type="text"
                                    id="search-tuiter"
-                                   class="form-control border-start-0 rounded-start rounded-pill"
-                                   placeholder="Search Tweeter" />
+                                   placeholder="Search Twitter"
+                                   class="form-control border-start-0 rounded-start rounded-pill wd-search-field"/>
                         </div>
                     </label>
                 </div>
-                <div class="col-1">
-                    <a href="explore-settings.html" class="fas fa-cog fa-2x text-decoration-none"></a>
+                <div class="col-1 px-0">
+                    <a href="explore-settings.html" class="fas fa-cog text-decoration-none wd-cog"></a>
                 </div>
             </div>
             <!--        Part 2: Navigation Tabs -->
-            <ul class="nav nav-tabs mt-2">
+            <ul class="nav nav-pills justify-content-between mt-2 px-3 border-start border-end">
                 <li class="nav-item">
-                    <a class="nav-link active" href="for-you.html">For you</a>
+                    <a class="nav-link wd-nav-link" href="for-you.html">For you</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="trending.html">Trending</a>
+                    <a class="nav-link wd-nav-link" href="trending.html">Trending</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="news.html">News</a>
+                    <a class="nav-link wd-nav-link" href="covid19.html">COVID-19</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="sports.html">Sports</a>
+                    <a class="nav-link wd-nav-link" href="news.html">News</a>
                 </li>
                 <li class="nav-item d-none d-md-block">
-                    <a class="nav-link" href="entertainment.html">Entertainment</a>
+                    <a class="nav-link wd-nav-link" href="sports.html">Sports</a>
+                </li>
+                <li class="nav-item d-none d-md-block d-lg-none d-xxl-block wd-active">
+                    <a class="nav-link wd-nav-link text-white" href="entertainment.html">Entertainment</a>
                 </li>
             </ul>
             <!--        Part 3: Image with title -->
-            <div class="position-relative mt-2">
+            <div class="position-relative">
                 <img src="../../../tuiter/images/spacex-starship-mk1.webp" class="card-img w-100" alt="...">
                 <h2 class="text-white position-absolute bottom-0 ps-2">SpaceX's Starship</h2>
             </div>
