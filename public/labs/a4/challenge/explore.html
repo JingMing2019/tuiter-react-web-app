@@ -8,6 +8,8 @@
     <link href="../../../vendors/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
     <link href="../../../vendors/fontawesome/css/all.css" rel="stylesheet" />
 
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" rel="stylesheet"/>
+
     <!-- Link to index.css style sheet, can override the library above -->
     <link href="explore.css" rel="stylesheet" />
 </head>
@@ -20,7 +22,7 @@
         <div class="d-block col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
             <div class="list-group">
                 <a href="#" class="list-group-item">
-                    <i class="d-inline fab fa-twitter"></i>
+                    <i class="d-inline fa-solid fa-t"></i>
                     <span class="d-none d-xl-inline"></span>
                 </a>
                 <a href="#" class="list-group-item">
@@ -66,10 +68,10 @@
             <button type="button" class="btn btn-primary rounded-pill mt-2 w-100 wd-media-query">Tweet</button>
         </div>
         <!-- MIDDLE: Main Content -->
-        <div class="d-block col-10 col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6">
+        <div class="d-block col-10 col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6 px-0 border-start border-end border-secondary">
             <!--        Part 1: Search Field -->
             <!--            align-items-center makes the cog stand at the center of the box -->
-            <div class="row align-items-center pt-2 px-3 border border-secondary">
+            <div class="row align-items-center pt-2 px-3 mx-0">
                 <div class="col-11 px-0">
                     <label for="search-tuiter" class="form-label w-100 mb-0">
                         <div class="input-group">
@@ -88,7 +90,7 @@
                 </div>
             </div>
             <!--        Part 2: Navigation Tabs -->
-            <ul class="nav nav-pills justify-content-between mt-2 px-3 border-start border-end">
+            <ul class="nav nav-pills justify-content-between pt-2 px-3 border-bottom border-secondary">
                 <li class="nav-item">
                     <a class="nav-link wd-nav-link" href="for-you.html">For you</a>
                 </li>
@@ -110,12 +112,70 @@
             </ul>
             <!--        Part 3: Image with title -->
             <div class="position-relative">
-                <img src="../../../tuiter/images/spacex-starship-mk1.webp" class="card-img w-100" alt="...">
-                <h2 class="text-white position-absolute bottom-0 ps-2">SpaceX's Starship</h2>
+                <img src="../../../images/my-universe.webp" class="card-img w-100" alt="...">
+                <h2 class="text-white position-absolute bottom-0 ps-2">My Universe</h2>
             </div>
             <!--        Part 4: List of Tweets -->
             <ul class="list-group">
-                <li class="list-group-item">
+                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3 border-bottom border-secondary ">
+                    <div>Music &#183 Last night</div>
+                    <h3 class="fw-bolder">
+                        BTS and ColdPlay release their new song, My Universe
+                        <span>
+                            <i class="fa-solid fa-lemon text-warning"></i>
+                        </span>
+                    </h3>
+                </li>
+                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                    <div class="row">
+                        <div class="col-9 col-md-10">
+                            <div class="text-secondary">Trending in R&B & soul</div>
+                            <div><span class="fw-bolder">R Kelly</span></div>
+                            <div class="text-secondary">18.2K Tweets</div>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <span>
+                                <i class="fas fa-ellipsis-h text-secondary float-end"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                    <div class="row">
+                        <div class="col-9 col-md-10">
+                            <div class="text-secondary">Trending in R&B & soul</div>
+                            <div><span class="fw-bolder">Chloe</span></div>
+                            <div class="text-secondary">
+                                Trending with
+                                <span class="wd-color-blue">Halle</span>
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <span>
+                                <i class="fas fa-ellipsis-h text-secondary float-end"></i>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                    <div class="row">
+                        <div class="col-9 col-md-10">
+                            <div>
+                                <span><i class="fa-solid fa-t"></i></span>
+                                <span class="fw-bolder">The Times</span>
+                                <span><i class="fas fa-check-circle"></i></span>
+                                <span class="text-secondary">&#183 September 24, 2021</span>
+                            </div>
+                            <div class="fw-bolder">
+                                Stanley Tucci: 'Food or sex? That's the cruelest question...'
+                            </div>
+                        </div>
+                        <div class="col-3 col-md-2">
+                            <img src="../../../tuiter/images/corgi2.jpeg" class="float-end rounded-3" width="90px" alt="Javascript">
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
@@ -131,11 +191,11 @@
                             </div>
                         </div>
                         <div class="col-3 col-md-2">
-                            <img src="../../../tuiter/images/reactjs.png" class="float-end rounded-3" width="90px" alt="React.js">
+                            <img src="../../../tuiter/images/reactjs.png" class="float-end rounded-3 wd-image-filter" width="90px" alt="React.js">
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div><span class="fw-bolder">JavaScript</span>
@@ -154,7 +214,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
@@ -166,7 +226,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item">
+                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
