@@ -20,7 +20,7 @@
     <div class="row">
         <!-- LEFT: Navigation sidebar -->
         <div class="px-0 d-block col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
-            <div class="list-group fs-5">
+            <div class="list-group fs-5 mb-3">
                 <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1 fs-4 py-2">
                     <i class="d-inline fa-solid fa-t fa-fw"></i>
                     <span class="d-none d-xl-inline"></span>
@@ -33,7 +33,7 @@
                         <div class="d-none d-xl-inline col-xl-10">Home</div>
                     </div>
                 </a>
-                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1 text-white">
+                <a href="#" class="list-group-item bg-transparent text-white mb-1">
                     <div class="row">
                         <div class="col-xl-2">
                             <i class="d-inline fas fa-hashtag fa-fw"></i>
@@ -96,24 +96,24 @@
             <!--            w-100 stands for width 100% as the parent -->
             <!--            wd-media-query makes the Tweet button wider than the list of icons above it.-->
             <div class="pe-4">
-                <button type="button" class="btn btn-primary rounded-pill mt-2 w-100 wd-media-query">Tweet</button>
+                <button type="button" class="btn wd-bg-color-blue text-white fw-bolder rounded-pill mt-2 py-3 w-100 wd-media-query">Tweet</button>
             </div>
         </div>
         <!-- MIDDLE: Main Content -->
-        <div class="d-block col-10 col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6 px-0 border-start border-end border-secondary">
+        <div class="col-10 col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6 px-0 wd-border-left-right-gray">
             <!--        Part 1: Search Field -->
             <!--            align-items-center makes the cog stand at the center of the box -->
             <div class="row align-items-center pt-2 px-3 mx-0">
                 <div class="col-11 px-0">
                     <label for="search-tuiter" class="form-label w-100 mb-0">
                         <div class="input-group">
-                    <span class="input-group-text border-end-0 rounded-end rounded-pill wd-search-field">
+                    <span class="input-group-text border-end-0 rounded-end rounded-pill wd-bg-color-gray">
                         <i class="fas fa-search px-0 wd-icon"></i>
                     </span>
                     <input type="text"
                            id="search-tuiter"
                            placeholder="Search Twitter"
-                           class="form-control border-start-0 rounded-start rounded-pill wd-search-field"/>
+                           class="form-control border-start-0 rounded-start rounded-pill wd-bg-color-gray"/>
                         </div>
                     </label>
                 </div>
@@ -122,7 +122,7 @@
                 </div>
             </div>
             <!--        Part 2: Navigation Tabs -->
-            <ul class="nav nav-pills justify-content-between pt-2 px-3 border-bottom border-secondary">
+            <ul class="nav nav-pills justify-content-between pt-2 px-3 wd-border-bottom-gray">
                 <li class="nav-item">
                     <a class="nav-link wd-nav-link" href="for-you.html">For you</a>
                 </li>
@@ -149,7 +149,7 @@
             </div>
             <!--        Part 4: List of Tweets -->
             <ul class="list-group">
-                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3 border-bottom border-secondary ">
+                <li class="list-group-item rounded-0 bg-transparent text-white pb-3 wd-border-bottom-gray">
                     <div>Music &#183 Last night</div>
                     <h3 class="fw-bolder">
                         BTS and ColdPlay release their new song, My Universe
@@ -158,7 +158,7 @@
                         </span>
                     </h3>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
+                <li class="list-group-item rounded-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Trending in R&B & soul</div>
@@ -172,7 +172,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
+                <li class="list-group-item rounded-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Trending in R&B & soul</div>
@@ -189,7 +189,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
+                <li class="list-group-item rounded-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div>
@@ -207,7 +207,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
+                <li class="list-group-item rounded-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
@@ -227,7 +227,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
+                <li class="list-group-item rounded-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div><span class="fw-bolder">JavaScript</span>
@@ -246,7 +246,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
+                <li class="list-group-item rounded-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
@@ -258,7 +258,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
+                <li class="list-group-item rounded-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
@@ -278,12 +278,12 @@
             </ul>
         </div>
         <!-- RIGHT: Who to Follow right sidebar -->
-        <div class="d-none d-lg-block col-lg-4 col-xl-4 col-xxl-4">
-            <div class="list-group">
-                <div class="list-group-item fw-bolder">
+        <div class="px-0 d-lg-block col-lg-4 col-xl-4 col-xxl-4">
+            <div class="list-group rounded-4 bg-dark mt-4 ms-4">
+                <div class="list-group-item border-0 bg-transparent wd-color-lightgray fw-bolder fs-4">
                     Who to follow
                 </div>
-                <div class="list-group-item">
+                <div class="list-group-item border-0 bg-transparent wd-color-lightgray">
                     <div class="row align-items-center justify-content-xl-around">
                         <div class="col-lg-2 col-xl-2 col-xxl-2">
                             <img src="../../../tuiter/images/java-logo.png" width="50px" class="rounded-circle" alt="Java Logo"/>
@@ -293,14 +293,14 @@
                                 Java
                                 <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <div>@Java</div>
+                            <div class="text-secondary">@Java</div>
                         </div>
                         <div class="col-lg-1 col-xl-3 col-xxl-3">
-                            <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                            <button type="button" class="btn btn-light rounded-pill fw-bolder">Follow</button>
                         </div>
                     </div>
                 </div>
-                <div class="list-group-item">
+                <div class="list-group-item border-0 bg-transparent wd-color-lightgray">
                     <div class="row align-items-center justify-content-xl-around">
                         <div class="col-lg-2 col-xl-2 col-xxl-2">
                             <img src="../../../tuiter/images/relativityspace-logo.webp" width="50px" class="rounded-circle" alt="Relative Space Logo"/>
@@ -310,14 +310,14 @@
                                 Relativity Space
                                 <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <div>@relativityspace</div>
+                            <div class="text-secondary">@relativityspace</div>
                         </div>
                         <div class="col-lg-1 col-xl-3 col-xxl-3">
-                            <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                            <button type="button" class="btn btn-light rounded-pill fw-bolder">Follow</button>
                         </div>
                     </div>
                 </div>
-                <div class="list-group-item">
+                <div class="list-group-item border-0 bg-transparent wd-color-lightgray">
                     <div class="row align-items-center justify-content-xl-around">
                         <div class="col-lg-2 col-xl-2 col-xxl-2">
                             <img src="../../../tuiter/images/virgingalactic-logo.png" width="50px" class="rounded-circle" alt="Virgin Galactic Logo"/>
@@ -327,14 +327,14 @@
                                 Virgin Galactic
                                 <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <div>@virgingalactic</div>
+                            <div class="text-secondary">@virgingalactic</div>
                         </div>
                         <div class="col-lg-1 col-xl-3 col-xxl-3">
-                            <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                            <button type="button" class="btn btn-light rounded-pill fw-bolder">Follow</button>
                         </div>
                     </div>
                 </div>
-                <div class="list-group-item">
+                <div class="list-group-item border-0 bg-transparent wd-color-lightgray">
                     <div class="row align-items-center justify-content-xl-around">
                         <div class="col-lg-2 col-xl-2 col-xxl-2">
                             <img src="../../../tuiter/images/nasa-logo.jpg" width="50px" class="rounded-circle" alt="NASA Logo"/>
@@ -344,14 +344,14 @@
                                 NASA
                                 <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <div>@NASA</div>
+                            <div class="text-secondary">@NASA</div>
                         </div>
                         <div class="col-lg-1 col-xl-3 col-xxl-3">
-                            <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                            <button type="button" class="btn btn-light rounded-pill fw-bolder">Follow</button>
                         </div>
                     </div>
                 </div>
-                <div class="list-group-item">
+                <div class="list-group-item border-0 bg-transparent wd-color-lightgray">
                     <div class="row align-items-center justify-content-xl-around">
                         <div class="col-lg-2 col-xl-2 col-xxl-2">
                             <img src="../../../tuiter/images/tesla-logo.png" width="50px" class="rounded-circle" alt="Tesla Logo"/>
@@ -361,13 +361,27 @@
                                 Tesla
                                 <span><i class="fas fa-check-circle"></i></span>
                             </div>
-                            <div>@Tesla</div>
+                            <div class="text-secondary">@Tesla</div>
                         </div>
                         <div class="col-lg-1 col-xl-3 col-xxl-3">
-                            <button type="button" class="btn btn-primary rounded-pill">Follow</button>
+                            <button type="button" class="btn btn-light rounded-pill fw-bolder">Follow</button>
                         </div>
                     </div>
                 </div>
+                <div class="list-group-item border-0 bg-transparent wd-color-blue py-3">
+                    Show more
+                </div>
+            </div>
+            <div class="text-secondary mt-4 ms-4 px-4 wd-text-size">
+                <span class="pe-2">Terms of Service</span>
+                <span class="pe-2">Privacy Policy</span>
+                <span class="pe-2">Cookie Policy</span>
+                <span class="pe-2">Ads info</span>
+                <span class="pe-2">More...</span>
+                <span class="pe-2">
+                    <i class="fa fa-copyright " aria-hidden="true"></i>
+                    2021 Twitter, Inc.
+                </span>
             </div>
 
         </div>
