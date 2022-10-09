@@ -19,53 +19,85 @@
 <div class="container">
     <div class="row">
         <!-- LEFT: Navigation sidebar -->
-        <div class="d-block col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
-            <div class="list-group">
-                <a href="#" class="list-group-item">
-                    <i class="d-inline fa-solid fa-t"></i>
+        <div class="px-0 d-block col-2 col-sm-2 col-md-2 col-lg-1 col-xl-2 col-xxl-2">
+            <div class="list-group fs-5">
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1 fs-4 py-2">
+                    <i class="d-inline fa-solid fa-t fa-fw"></i>
                     <span class="d-none d-xl-inline"></span>
                 </a>
-                <a href="#" class="list-group-item">
-                    <i class="d-inline fas fa-home"></i>
-                    <span class="d-none d-xl-inline">Home</span>
-                </a>
-                <a href="#" class="list-group-item active">
-                    <i class="d-inline fas fa-hashtag"></i>
-                    <span class="d-none d-xl-inline">Explore</span>
-                </a>
-                <a href="#" class="list-group-item">
-                    <i class="d-inline fas fa-bell"></i>
-                    <span class="d-none d-xl-inline">Notifications</span>
-                </a>
-                <a href="#" class="list-group-item">
-                    <i class="d-inline fas fa-envelope"></i>
-                    <span class="d-none d-xl-inline">Messages</span>
-                </a>
-                <a href="#" class="list-group-item">
-                    <i class="d-inline fas fa-bookmark"></i>
-                    <span class="d-none d-xl-inline">Bookmarks</span>
-                </a>
-                <a href="#" class="list-group-item">
-                    <i class="d-inline fas fa-list"></i>
-                    <span class="d-none d-xl-inline">Lists</span>
-                </a>
-                <a href="#" class="list-group-item">
-                    <i class="d-inline fas fa-user"></i>
-                    <span class="d-none d-xl-inline">Profile</span>
-                </a>
-                <a href="#" class="list-group-item">
-                    <div class="d-inline">
-                        <span class="fa-stack wd-small">
-                            <i class="fas fa-circle fa-stack-2x"></i>
-                            <i class="fas fa-ellipsis-h fa-stack-1x fa-inverse"></i>
-                        </span>
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <i class="d-inline fas fa-home fa-fw"></i>
+                        </div>
+                        <div class="d-none d-xl-inline col-xl-10">Home</div>
                     </div>
-                    <span class="d-none d-xl-inline">More</span>
+                </a>
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1 text-white">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <i class="d-inline fas fa-hashtag fa-fw"></i>
+                        </div>
+                        <div class="d-none d-xl-inline col-xl-10">Explore</div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <i class="d-inline fas fa-bell fa-fw"></i>
+                        </div>
+                        <div class="d-none d-xl-inline col-xl-10">Notifications </div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <i class="d-inline fas fa-envelope fa-fw"></i>
+                        </div>
+                        <div class="d-none d-xl-inline col-xl-10">Messages</div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <i class="d-inline fas fa-bookmark fa-fw"></i>
+                        </div>
+                        <div class="d-none d-xl-inline col-xl-10">Bookmarks</div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <i class="d-inline fas fa-list fa-fw"></i>
+                        </div>
+                        <div class="d-none d-xl-inline col-xl-10">Lists</div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <i class="d-inline fas fa-user fa-fw"></i>
+                        </div>
+                        <div class="d-none d-xl-inline col-xl-10">Profile</div>
+                    </div>
+                </a>
+                <a href="#" class="list-group-item bg-transparent wd-color-lightgray mb-1">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <span class="fa-stack wd-small fa-fw">
+                                <i class="fa-regular fa-circle fa-stack-2x" style="text-align: left"></i>
+                                <i class="fa-solid fa-ellipsis fa-stack-1x" style="width: 80%"></i>
+                            </span>
+                        </div>
+                        <div class="d-none d-xl-inline col-xl-10">More</div>
+                    </div>
                 </a>
             </div>
             <!--            w-100 stands for width 100% as the parent -->
             <!--            wd-media-query makes the Tweet button wider than the list of icons above it.-->
-            <button type="button" class="btn btn-primary rounded-pill mt-2 w-100 wd-media-query">Tweet</button>
+            <div class="pe-4">
+                <button type="button" class="btn btn-primary rounded-pill mt-2 w-100 wd-media-query">Tweet</button>
+            </div>
         </div>
         <!-- MIDDLE: Main Content -->
         <div class="d-block col-10 col-sm-10 col-md-10 col-lg-7 col-xl-6 col-xxl-6 px-0 border-start border-end border-secondary">
@@ -78,10 +110,10 @@
                     <span class="input-group-text border-end-0 rounded-end rounded-pill wd-search-field">
                         <i class="fas fa-search px-0 wd-icon"></i>
                     </span>
-                            <input type="text"
-                                   id="search-tuiter"
-                                   placeholder="Search Twitter"
-                                   class="form-control border-start-0 rounded-start rounded-pill wd-search-field"/>
+                    <input type="text"
+                           id="search-tuiter"
+                           placeholder="Search Twitter"
+                           class="form-control border-start-0 rounded-start rounded-pill wd-search-field"/>
                         </div>
                     </label>
                 </div>
@@ -126,11 +158,11 @@
                         </span>
                     </h3>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Trending in R&B & soul</div>
-                            <div><span class="fw-bolder">R Kelly</span></div>
+                            <div><span class="fs-5">R Kelly</span></div>
                             <div class="text-secondary">18.2K Tweets</div>
                         </div>
                         <div class="col-3 col-md-2">
@@ -140,11 +172,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Trending in R&B & soul</div>
-                            <div><span class="fw-bolder">Chloe</span></div>
+                            <div><span class="fs-5">Chloe</span></div>
                             <div class="text-secondary">
                                 Trending with
                                 <span class="wd-color-blue">Halle</span>
@@ -157,7 +189,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div>
@@ -166,7 +198,7 @@
                                 <span><i class="fas fa-check-circle"></i></span>
                                 <span class="text-secondary">&#183 September 24, 2021</span>
                             </div>
-                            <div class="fw-bolder">
+                            <div class="fs-5">
                                 Stanley Tucci: 'Food or sex? That's the cruelest question...'
                             </div>
                         </div>
@@ -175,7 +207,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
@@ -185,7 +217,7 @@
                                 </span>
                                 <span class="text-secondary">- 2h</span>
                             </div>
-                            <div class="fw-bolder">
+                            <div class="fs-5">
                                 React.js is a component based front end library that makes it very easy to build Single
                                 Page Applications or SPAs
                             </div>
@@ -195,7 +227,7 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div><span class="fw-bolder">JavaScript</span>
@@ -204,7 +236,7 @@
                                 </span>
                                 <span class="text-secondary">- 2h</span>
                             </div>
-                            <div class="fw-bolder">
+                            <div class="fs-5">
                                 JavaScript is programming language that can run on browsers as well as desktops
                             </div>
                             <div class="text-secondary">123K Tweets</div>
@@ -214,11 +246,11 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
-                            <div><span class="fw-bolder">jQuery</span></div>
+                            <div><span class="fs-5">jQuery</span></div>
                             <div class="text-secondary">123K Tweets</div>
                         </div>
                         <div class="col-3 col-md-2">
@@ -226,12 +258,12 @@
                         </div>
                     </div>
                 </li>
-                <li class="list-group-item rounded-0 border-0 bg-transparent text-white pb-3">
+                <li class="list-group-item rounded-0 border-0 bg-transparent wd-color-lightgray pb-3">
                     <div class="row">
                         <div class="col-9 col-md-10">
                             <div class="text-secondary">Web Development</div>
                             <div>
-                                <span class="fw-bolder">NodeJS</span>
+                                <span class="fs-5">NodeJS</span>
                                 <span>
                                     <i class="fas fa-check-circle"></i>
                                 </span>
