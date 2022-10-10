@@ -14,7 +14,8 @@
     color: lightgray;
 }
 .wd-color-lightgray {
-    color: rgb(195, 200, 200);
+    /*color: rgb(195, 200, 200);*/
+    color: lightgray;
 }
 .wd-bg-color-blue {
     background-color: rgb(29, 161, 242)
