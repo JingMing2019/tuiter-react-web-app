@@ -66,3 +66,29 @@ const loggedIn = true;
 const greeting = loggedIn ? 'Welcome!' : 'Please login';
 console.log(greeting)
 
+console.log('Legacy ES5 function')
+function add (a, b) {
+    return a + b;
+}
+const twoPlusFour = add(2, 4);
+console.log(twoPlusFour);
+
+console.log('New ES6 functions')
+const subtract = (a, b) => {
+    return a - b;
+}
+const threeMinusOne = subtract(3, 1);
+console.log(threeMinusOne);
+
+console.log('Implied return');
+const multiply = (a, b) => a * b;
+const fourTimesFive = multiply(4, 5);
+console.log(fourTimesFive);
+
+console.log('Parenthesis and parameters')
+const square = a => a * a;
+const plusOne = a => a + 1;
+const twoSquared = square(2);
+const threePlusOne = plusOne(3);
+console.log(twoSquared);
+console.log(threePlusOne);
