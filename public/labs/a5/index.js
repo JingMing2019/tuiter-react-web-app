@@ -258,5 +258,18 @@ const init = () => {
     }
     const eventTarget = $('#event-target');
     eventTarget.click(handleEventTarget);
+
+    let hideBtn, showBtn, hideShowHeader;
+    hideBtn = $('#hide');
+    showBtn = $('#show');
+    hideShowHeader = $('#hide-show');
+    const hideHandler = () => {
+        hideShowHeader.hide();
+    }
+    const showHandler = () => {
+        hideShowHeader.show();
+    }
+    hideBtn.click(hideHandler);
+    showBtn.click(showHandler);
 }
 $(init);
