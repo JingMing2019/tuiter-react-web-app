@@ -219,5 +219,30 @@ const init = () => {
     const emptyUl = $('#empty-this');
     removeLi.remove();
     emptyUl.empty();
+
+    const changeThisText = $('#change-this-text');
+    const changeThisHtml = $('#change-this-html');
+    changeThisText.html('New text');
+    // backticks `` are used to create strings in ES6
+    changeThisHtml.html(`
+        <li>Line item A</li>
+        <li>Line item B</li>
+        <li>Line item C</li>`)
+
+    const child2 = $('#child-2');
+    const parent1 = child2.parents('#parent');
+    parent1
+        .css('background-color', 'red')
+        .css('color', 'white');
+    // parent1.css(
+    //     {
+    //         'background-color' : 'red',
+    //         'color' : 'white'
+    //     }
+    // )
+
+    const parent = $('#parent');
+    const child = parent.find('#child-2');
+    child.css('background-color', 'blue');
 }
 $(init);
