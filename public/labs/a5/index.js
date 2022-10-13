@@ -244,5 +244,19 @@ const init = () => {
     const parent = $('#parent');
     const child = parent.find('#child-2');
     child.css('background-color', 'blue');
+
+    const handleClick = () => console.log('Handle click');
+    const clickable = $('.clickable');
+    clickable.click(handleClick);
+
+    const handleEventTarget = (event) => {
+        const target = event.target;
+        console.log(target);
+        $(target)
+            .css('background-color', 'blue')
+            .css('color', 'white');
+    }
+    const eventTarget = $('#event-target');
+    eventTarget.click(handleEventTarget);
 }
 $(init);
