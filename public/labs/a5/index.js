@@ -180,5 +180,10 @@ const init = () => {
     console.log('Binding to DOM');
     console.log(bindById);
     console.log(bindByClass);
+
+    const changeStyle = $('#change-style');
+    const changeStyle2 = $('.change-style');
+    changeStyle.css('color', 'red');
+    changeStyle2.css('color', 'blue');
 }
 $(init);
