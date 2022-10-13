@@ -192,6 +192,14 @@ const init = () => {
     console.log(id);
 
     const setClassAttr = $('#set-class-attr');
+    // add class by attribute
     setClassAttr.attr('class', 'class-0');
+
+    const addClass1Example = $('#add-class-1');
+    // add class by addClass function
+    addClass1Example.addClass('class-1');
+
+    const removeClass1Example = $('#remove-class-1');
+    removeClass1Example.removeClass('class-2');
 }
 $(init);
