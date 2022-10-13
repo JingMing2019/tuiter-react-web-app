@@ -1,3 +1,4 @@
+/* eslint-env jquery */
 // alert('Hello World!');
 console.log('Hello World!');
 
@@ -185,5 +186,12 @@ const init = () => {
     const changeStyle2 = $('.change-style');
     changeStyle.css('color', 'red');
     changeStyle2.css('color', 'blue');
+
+    const getIdAttr = $('#get-id-attr');
+    const id = getIdAttr.attr('id');
+    console.log(id);
+
+    const setClassAttr = $('#set-class-attr');
+    setClassAttr.attr('class', 'class-0');
 }
 $(init);
