@@ -201,5 +201,11 @@ const init = () => {
 
     const removeClass1Example = $('#remove-class-1');
     removeClass1Example.removeClass('class-2');
+
+    const hideMe = $('#hide-me');
+    hideMe.hide();
+
+    const showMe = $('#show-me');
+    showMe.show();
 }
 $(init);
