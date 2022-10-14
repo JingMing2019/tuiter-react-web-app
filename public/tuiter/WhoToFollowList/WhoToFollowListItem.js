@@ -1,7 +1,6 @@
 const WhoToFollowListItem = (who) => {
-    return(`
-        
-        <div class="list-group-item">
+    return(`   
+        <li class="list-group-item">
             <div class="row align-items-center justify-content-xl-around">
                 <div class="col-lg-2 col-xl-2 col-xxl-2">
                     <img src="${who.avatarIcon}" width="50px" class="rounded-circle" alt="Java Logo"/>
@@ -17,7 +16,7 @@ const WhoToFollowListItem = (who) => {
                     <a href="#" class="btn btn-primary btn-block rounded-pill">Follow</a>
                 </div>
             </div>
-        </div>
+        </li>
     `)
 }
 

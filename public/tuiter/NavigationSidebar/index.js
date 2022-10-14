@@ -51,4 +51,5 @@ const NavigationSidebar = () => {
 
 export default NavigationSidebar;
 
-$('#wd-explore').append(`${NavigationSidebar()}`)
+// only used for single page test
+// $('#wd-explore').append(`${NavigationSidebar()}`)
