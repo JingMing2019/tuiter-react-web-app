@@ -7,8 +7,8 @@ const ExploreComponent = () => {
             <div class="col-11 px-0">
                 <label for="search-tuiter" class="form-label w-100 mb-0">
                 <div class="input-group">
-                    <span class="input-group-text bg-transparent border-end-0 rounded-end rounded-pill">
-                        <i class="fas fa-search"></i>
+                    <span class="input-group-text bg-white border-end-0 rounded-end rounded-pill">
+                        <i class="fas fa-search text-secondary"></i>
                     </span>
                     <input type="text"
                            id="search-tuiter"
