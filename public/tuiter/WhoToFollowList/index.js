@@ -11,8 +11,7 @@ const WhoToFollowList = () => {
             ${
                 who.map(single => {
                     return(`${WhoToFollowListItem(single)}`)
-                }).join('')
-            }
+                }).join('')}
         </ul>
     `);
 }
