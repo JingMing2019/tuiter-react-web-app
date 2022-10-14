@@ -1,3 +1,4 @@
+/* eslint-env jquery */
 function clickMe() {
     console.log("Thanks for clicking me");
 }
@@ -51,7 +52,7 @@ function init() {
         todoItems.forEach((item, index) => {
             const newTodoItem = $(`
                 <li>
-                    <button id="${index}", class="delete-item">Delete</button>
+                    <button id="${index}" class="delete-item">Delete</button>
                     ${item}
                 </li>`);
             todoList.append(newTodoItem);
@@ -85,6 +86,18 @@ function init() {
     // todoList.append(makeDinner);
     // const makeBreakfast = $('<li>Make Breakfast</li>');
     // todoList.prepend(makeBreakfast);
+    // const alice = {
+    //     first: 'Alice',
+    //     last: 'Wonderland',
+    //     salary: 100000};
+    // console.log(alice)
+    // alice['salary'] = alice.salary + 10000;
+    // console.log(alice)
+    // alice.salary += 10000;
+    // console.log(alice)
+    //
+    // // $("#hello").html("Hello World!")
+    // $("<h1>").append(" World!")
 
 }
 // $ alias jQuery
