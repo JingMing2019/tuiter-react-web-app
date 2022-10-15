@@ -6,11 +6,11 @@ const NavigationSidebar = () => {
                 <!-- continue rest of list, e.g., Home, Explore, Notifications,  Messages, etc. -->
                 <span class="d-none d-xl-inline"></span>
             </a>
-            <a class="list-group-item" href="/">
+            <a class="list-group-item" href="../HomeScreen/index.html">
                 <i class="d-inline fas fa-home"></i>
                 <span class="d-none d-xl-inline">Home</span>
             </a>
-            <a href="/" class="list-group-item active">
+            <a class="list-group-item active" href="../ExploreScreen/index.html">
                 <i class="d-inline fas fa-hashtag"></i>
                 <span class="d-none d-xl-inline">Explore</span>
             </a>
@@ -52,4 +52,4 @@ const NavigationSidebar = () => {
 export default NavigationSidebar;
 
 // only used for single page test
-// $('#wd-explore').append(`${NavigationSidebar()}`)
+// $('#wd-nav').append(`${NavigationSidebar()}`)

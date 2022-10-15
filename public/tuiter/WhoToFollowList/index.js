@@ -18,7 +18,7 @@ const WhoToFollowList = () => {
 export default WhoToFollowList;
 
 // only used for single page test
-// $('#wd-explore').append(`
+// $('#wd-follow').append(`
 //     <ul class="list-group">
 //         <li class="list-group-item fw-bolder">
 //             Who to follow
