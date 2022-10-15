@@ -21,9 +21,12 @@ function homeComponent() {
             </div>
         </div>
     `);
-    $("img").attr("width", "80px");
+    // Edit summary post image width and breakpoints column size to adapt to the Home Screen
+    $("img.wd-post-summary-image").attr("width", "80px");
     $('.wd-post-left').addClass("col-lg-9 col-xxl-10").removeClass("col-lg-10");
     $('.wd-post-right').addClass("col-lg-3 col-xxl-2").removeClass("col-lg-2");
+    // Set post list item's background as transparent in the middle Home Component area
+    $('.wd-post-list-item').addClass("bg-transparent");
 }
 
 $(homeComponent)

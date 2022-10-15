@@ -14,7 +14,7 @@ const postSummaryItem = (post) => {
                     <div class="text-secondary">${post.tweets ? post.tweets + ' Tweets' : ''}</div>
                 </div>
                 <div class="col-3 col-lg-2 wd-post-right">
-                    <img src="${post.image}" class="rounded-3 float-end" width="100px" alt="React.js">
+                    <img src="${post.image}" class="rounded-3 float-end wd-post-summary-image" width="100px" alt="React.js">
                 </div>
             </div>
         </li>
