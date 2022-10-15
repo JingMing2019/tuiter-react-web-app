@@ -2,7 +2,7 @@ import PostSummaryList from "../PostSummaryList/index.js";
 
 const ExploreComponent = () => {
     return(`
-        <div class="row align-items-center mx-0 ">
+        <div class="row align-items-center mx-0">
         <!-- search field and cog -->
             <div class="col-11 px-0">
                 <label for="search-tuiter" class="form-label w-100 mb-0">
@@ -44,6 +44,7 @@ const ExploreComponent = () => {
             <img src="../images/spacex-starship-mk1.webp" class="card-img w-100" alt="...">
             <h2 class="text-white position-absolute bottom-0 ps-2">SpaceX's Starship</h2>
         </div>
+        <!-- Posts -->
         ${PostSummaryList()}
     `);
 }
