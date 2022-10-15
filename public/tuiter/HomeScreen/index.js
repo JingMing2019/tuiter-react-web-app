@@ -1,6 +1,7 @@
 /* eslint-env jquery */
 import NavigationSidebar from "../NavigationSidebar/index.js";
 import PostSummaryList from "../PostSummaryList/index.js";
+import PostList from "../PostList/index.js";
 
 function homeComponent() {
     $('#wd-home').append(`
@@ -10,8 +11,9 @@ function homeComponent() {
 <!--                <h3>Navigation Sidebar</h3>-->
                 ${NavigationSidebar()}
             </div>
-            <div class="col-10 col-lg-7 col-xl-6 bg-danger">
-                <h3>Home Component</h3>         
+            <div class="col-10 col-lg-7 col-xl-6">
+<!--                <h3>Home Component</h3>  -->
+                ${PostList()}       
             </div>
             <div class="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
 <!--                <h3>Post Summary List</h3>-->
