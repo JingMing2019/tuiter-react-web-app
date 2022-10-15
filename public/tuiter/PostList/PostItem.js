@@ -4,7 +4,7 @@ const PostItem = (post) => {
     let title = post.title;
     let newTitle = title.replace(post.markText, '<span class="text-primary">' + post.markText + '</span>');
     let postImageClass = "w-100 wd-rounded-top";
-    let postContentClass = "border-top border-secondary px-3 py-3";
+    let postContentClass = "border-top border-light px-3 py-3";
     if (!post.postTitle) {
         postImageClass = "w-100 rounded-4";
         postContentClass = "d-none";
@@ -33,7 +33,7 @@ const PostItem = (post) => {
                         ${newTitle}
                     </div>
 <!--                Post -->
-                    <div class="border border-secondary rounded-4 my-3">
+                    <div class="border border-light rounded-4 my-3">
                         <img src="${post.postImage}" class="${postImageClass}" alt="Post Image"/>
                         <div class="${postContentClass}">
                             <h6 class="mb-0">${post.postTitle}</h6>
