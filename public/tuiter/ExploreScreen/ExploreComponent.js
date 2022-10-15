@@ -12,7 +12,7 @@ const ExploreComponent = () => {
                     </span>
                     <input type="text"
                            id="search-tuiter"
-                           class="form-control border-start-0 rounded-start rounded-pill"
+                           class="form-control border-start-0 rounded-start rounded-pill px-0"
                            placeholder="Search Twitter" />
                 </div>
                 </label>
@@ -42,7 +42,7 @@ const ExploreComponent = () => {
         <!-- image with overlaid text -->
         <div class="position-relative mb-2">
             <img src="../images/spacex-starship-mk1.webp" class="card-img w-100" alt="...">
-            <h2 class="text-white position-absolute bottom-0 ps-2">SpaceX's Starship</h2>
+            <h2 class="text-light fw-bolder position-absolute bottom-0 ps-2">SpaceX's Starship</h2>
         </div>
         <!-- Posts -->
         ${PostSummaryList()}

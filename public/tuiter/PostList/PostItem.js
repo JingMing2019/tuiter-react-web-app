@@ -35,7 +35,7 @@ const PostItem = (post) => {
                         ${newTitle}
                     </div>
 <!--                Post -->
-                    <div class="border border-light rounded-4 my-3">
+                    <div class="border border-light border-2 rounded-4 my-3">
                         <img src="${post.postImage}" class="w-100 ${postImageClass}" alt="Post Image"/>
                         <div class="${postBodyClass}">
                             <h6 class="mb-0">${post.postTitle}</h6>
