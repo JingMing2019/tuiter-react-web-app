@@ -17,8 +17,8 @@ const ExploreComponent = () => {
                 </div>
                 </label>
             </div>
-            <div class="col-1 wd-cog">
-                <a href="explore-settings.html" class="fas fa-cog fa-2x text-decoration-none"></a>
+            <div class="col-1 wd-cog pe-0">
+                <a href="explore-settings.html" class="fas fa-cog fa-2x text-decoration-none float-end"></a>
             </div>
         </div>
         <ul class="nav mb-2 nav-tabs mt-2">
