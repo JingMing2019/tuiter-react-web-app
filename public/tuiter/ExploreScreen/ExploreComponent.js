@@ -23,11 +23,12 @@ const ExploreComponent = () => {
             </div>
         </div>
         <!-- nav tabs -->
+<!--        TODO: make the below 'active' parameter flexible -->
         ${NavigationTab("for you")}
         <!-- image with overlaid text -->
         <div class="position-relative mb-2">
             <img src="../images/spacex-starship-mk1.webp" class="card-img w-100" alt="...">
-            <h2 class="text-light fw-bolder position-absolute bottom-0 ps-2">SpaceX's Starship</h2>
+            <h2 class="fw-bolder position-absolute bottom-0 ps-2">SpaceX's Starship</h2>
         </div>
         <!-- Posts -->
         ${PostSummaryList()}
