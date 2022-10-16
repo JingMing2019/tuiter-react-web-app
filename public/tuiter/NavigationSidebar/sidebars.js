@@ -2,7 +2,7 @@ let sidebars;
 export default sidebars = [
     {
         stack: false,
-        source: "/",
+        source: "../HomeScreen/index.html",
         iconMain: "fab fa-twitter",
         iconSub: "",
         name: "",

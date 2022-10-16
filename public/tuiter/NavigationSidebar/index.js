@@ -6,7 +6,7 @@ const NavigationSidebar = (active) => {
         <div class="list-group">
             ${sidebars.map(sidebar => {
                 return(`
-                    ${NavSidebarItem(sidebar, active)}
+                    ${NavSidebarItem(sidebar, active === sidebar.name ? "active" : "")}
                 `)
             }).join('')}
         </div>

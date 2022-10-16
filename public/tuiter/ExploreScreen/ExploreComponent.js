@@ -1,4 +1,5 @@
 import PostSummaryList from "../PostSummaryList/index.js";
+import NavigationTab from "../NavigationTab/index.js";
 
 const ExploreComponent = () => {
     return(`
@@ -21,24 +22,8 @@ const ExploreComponent = () => {
                 <a href="explore-settings.html" class="fas fa-cog fa-2x text-decoration-none float-end"></a>
             </div>
         </div>
-        <ul class="nav mb-2 nav-tabs mt-2">
-        <!-- tabs -->
-            <li class="nav-item">
-                <a class="nav-link active" href="for-you.html">For you</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="trending.html">Trending</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="news.html">News</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="sports.html">Sports</a>
-            </li>
-            <li class="nav-item d-none d-md-block">
-                <a class="nav-link" href="entertainment.html">Entertainment</a>
-            </li>
-        </ul>
+        <!-- nav tabs -->
+        ${NavigationTab("for you")}
         <!-- image with overlaid text -->
         <div class="position-relative mb-2">
             <img src="../images/spacex-starship-mk1.webp" class="card-img w-100" alt="...">
