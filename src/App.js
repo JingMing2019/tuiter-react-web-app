@@ -2,6 +2,7 @@
 import './App.css';
 import Labs from "./labs"
 import HelloWorld from "./labs/a6/hello-world";
+import Tuiter from "./tuiter";
 
 function App() {
   return (
@@ -12,7 +13,8 @@ function App() {
       <div className="container">
         {/*<h1>Hello World!</h1>*/}
           <HelloWorld/>
-        <Labs/>
+          <Labs/>
+          <Tuiter/>
       </div>
       // <div className="App">
     //   <header className="App-header">
