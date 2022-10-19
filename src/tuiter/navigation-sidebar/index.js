@@ -6,7 +6,12 @@ const NavigationSidebar = (
         active = "explore"
     }
 ) => {
-    return null;
+    // React.js function components can only return a single HTML element, can use <></> to replace
+    return(
+        <div>
+
+        </div>
+    );
 }
 
 export default NavigationSidebar;
