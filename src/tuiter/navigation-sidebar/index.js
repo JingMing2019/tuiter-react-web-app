@@ -1,4 +1,6 @@
 import React from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
 
 const NavigationSidebar = (
     // Convert all parameters into an object deconstructor and provide default value
@@ -12,7 +14,7 @@ const NavigationSidebar = (
         // In JavaScript class is a keyword so we can't use it, use className instead
         <div className="list-group">
             <a className="list-group-item">
-                <span><i className="bi bi-twitter"/></span>
+                <FontAwesomeIcon icon={faTwitter} />
                 Tuiter
             </a>
             <a className={`list-group-item
