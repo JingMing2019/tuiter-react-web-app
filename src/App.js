@@ -1,14 +1,17 @@
 // import logo from './logo.svg';
 import './App.css';
 import Labs from "./labs"
+import HelloWorld from "./labs/a6/hello-world";
 
 function App() {
   return (
       // This return statement is returning an HTML tag, not an HTML string. This is possible because React.js uses a
       // library called JSX or JavaScript XML. JSX allows mixing and matching JavaScript and XML seamlessly and HTML
       // is just a particular flavor of XML.
+      // Note that in React.js we use className instead of class
       <div className="container">
-        <h1>Hello World!</h1>
+        {/*<h1>Hello World!</h1>*/}
+          <HelloWorld/>
         <Labs/>
       </div>
       // <div className="App">
