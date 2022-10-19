@@ -1,3 +1,6 @@
+# Access the website
+The website is deployed on Netlify, please [click](https://beautiful-basbousa-150404.netlify.app/) to view.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
