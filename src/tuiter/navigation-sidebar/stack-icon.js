@@ -10,7 +10,7 @@ const StackIcon = (
     return(
         <span className="fa-layers fa-fw">
           <FontAwesomeIcon icon={iconMain} className={"mx-0"}/>
-          <FontAwesomeIcon icon={iconSub} transform="shrink-6" inverse className={"mx-0"} width={"80%"}/>
+          <FontAwesomeIcon icon={iconSub} transform="shrink-6" className={"mx-0"} width={"80%"}/>
         </span>
     )
 }
