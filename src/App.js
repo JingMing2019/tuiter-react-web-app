@@ -6,6 +6,15 @@ import Tuiter from "./tuiter";
 import {BrowserRouter} from "react-router-dom";
 import {Routes, Route} from "react-router";
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { fas, faHome, faHashtag, faEllipsis, faList, faCircleCheck, faGear } from '@fortawesome/free-solid-svg-icons'
+import { far, faBell, faEnvelope, faBookmark, faUser, faCircle } from '@fortawesome/free-regular-svg-icons'
+import { faTwitter} from '@fortawesome/free-brands-svg-icons'
+
+library.add(fas, faHome, faHashtag, faEllipsis, faList, faCircleCheck, faGear,
+    far, faBell, faEnvelope, faBookmark, faUser, faCircle,
+    faTwitter)
+
 function App() {
   return (
       // This return statement is returning an HTML tag, not an HTML string. This is possible because React.js uses a
@@ -25,7 +34,7 @@ function App() {
                   <Route path="/hello" element={<HelloWorld/>}/>
               </Routes>
               <Routes>
-                  <Route path="/tuiter" element={<Tuiter/>}/>
+                  <Route path="/tuiter/*" element={<Tuiter/>}/>
               </Routes>
           </div>
       </BrowserRouter>

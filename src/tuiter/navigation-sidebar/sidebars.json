@@ -1,64 +1,64 @@
 [
     {
         "stack": false,
-        "source": "../HomeScreen/index.html",
-        "iconMain": "fab fa-twitter",
+        "source": "/",
+        "iconMain": "fa-brands fa-twitter",
         "iconSub": "",
         "name": ""
     },
     {
         "stack": false,
         "source": "../HomeScreen/index.html",
-        "iconMain": "fas fa-home",
+        "iconMain": "fa-solid fa-home",
         "iconSub": "",
         "name": "home"
     },
     {
         "stack": false,
         "source": "../ExploreScreen/index.html",
-        "iconMain": "fas fa-hashtag",
+        "iconMain": "fa-solid fa-hashtag",
         "iconSub": "",
         "name": "explore"
     },
     {
         "stack": false,
         "source": "/",
-        "iconMain": "fas fa-bell",
+        "iconMain": "fa-regular fa-bell",
         "iconSub": "",
         "name": "notifications"
     },
     {
         "stack": false,
         "source": "/",
-        "iconMain": "fas fa-envelope",
+        "iconMain": "fa-regular fa-envelope",
         "iconSub": "",
         "name": "messages"
     },
     {
         "stack": false,
         "source": "/",
-        "iconMain": "fas fa-bookmark",
+        "iconMain": "fa-regular fa-bookmark",
         "iconSub": "",
         "name": "bookmarks"
     },
     {
         "stack": false,
         "source": "/",
-        "iconMain": "fas fa-list",
+        "iconMain": "fa-solid fa-list",
         "iconSub": "",
         "name": "lists"
     },
     {
         "stack": false,
         "source": "/",
-        "iconMain": "fas fa-user",
+        "iconMain": "fa-regular fa-user",
         "iconSub": "",
         "name": "profile"
     },
     {
         "stack": true,
         "source": "/",
-        "iconMain": "fas fa-circle",
+        "iconMain": "far fa-circle",
         "iconSub": "fas fa-ellipsis-h",
         "name": "more"
     }
