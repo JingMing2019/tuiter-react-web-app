@@ -4,11 +4,11 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 const PostSummaryItem = (
     {
         post = {
-            topic: 'Web Development',
-            userName: 'ReactJS',
-            time: '2h',
-            title: 'React.js is a component based front end library that makes it very easy to build Single Page Applications or SPAs',
-            image: 'reactjs-blue.png'
+            "topic": "Space",
+            "userName": "SpaceX",
+            "time": "2h",
+            "title": "Tesla Cybertruck lands on Mars and picks up the Curiosity rover on its 6' bed",
+            "image": "tesla-logo.png"
         }
     }
 ) => {
@@ -19,8 +19,8 @@ const PostSummaryItem = (
                     <div className="text-secondary">{post.topic}</div>
                     <div>
                         <span className="fw-bolder">{post.userName}</span>
-                        <FontAwesomeIcon icon="fa-solid fa-circle-check"/>
-                        <span className="text-secondary">- {post.time}</span>
+                        <sapn><FontAwesomeIcon icon="fa-solid fa-circle-check"/></sapn>
+                        <span className="text-secondary"> - {post.time}</span>
                     </div>
                     <div className="fw-bolder">
                         {post.title}
