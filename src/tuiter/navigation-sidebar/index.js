@@ -2,6 +2,7 @@ import React from "react";
 import {useLocation} from "react-router";
 import NavigationSidebarItem from "./navigation-sidebar-item";
 import sidebars from "./sidebars.json";
+import {Link} from "react-router-dom";
 
 const NavigationSidebar = (
     // // Convert all parameters into an object deconstructor and provide default value
@@ -17,6 +18,7 @@ const NavigationSidebar = (
         // The HTML class attribute is commonly used to associate CSS transformation rules to an HTML element.
         // In JavaScript class is a keyword so we can't use it, use className instead
         <div className="list-group">
+            <Link to="/" className="list-group-item">Labs</Link>
             {
                 sidebars.map(sidebar => {
                 return(<NavigationSidebarItem sidebar={sidebar} active={active}/>)

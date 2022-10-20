@@ -1,6 +1,7 @@
 import {Link} from "react-router-dom";
 import React from "react";
-import Icon from "./icon";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import StackIcon from "./stack-icon";
 
 const NavigationSideBarItem = ({
     sidebar = {
@@ -16,7 +17,10 @@ const NavigationSideBarItem = ({
         <Link to={`/tuiter/${sidebar.name}`} className={`list-group-item ${sidebar.name && active === sidebar.name?'active':''}`}>
             <div className="row">
                 <div className="col-xl-2">
-                    <Icon isStack={sidebar.stack} iconMain={sidebar.iconMain} iconSub={sidebar.iconSub}/>
+                    {/* If sidebar icon is not stack, simply call FontAwesomeIcon function */}
+                    {!sidebar.stack && <FontAwesomeIcon icon={sidebar.iconMain}/>}
+                    {/* If sidebar icon is stack, send main icon and sub icon to StackIcon where two icon will be layered up */}
+                    {sidebar.stack && <StackIcon iconMain={sidebar.iconMain} iconSub={sidebar.iconSub}/>}
                 </div>
                 <div className="d-none d-xl-inline col-xl-10">
                     {sidebar.name ? sidebar.name[0].toUpperCase() + sidebar.name.slice(1) : ""}
