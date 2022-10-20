@@ -18,8 +18,8 @@ const PostSummaryItem = (
                 <div className="col-9 col-lg-10 wd-post-left">
                     <div className="text-secondary">{post.topic}</div>
                     <div>
-                        <span className="fw-bolder">{post.userName}</span>
-                        <sapn><FontAwesomeIcon icon="fa-solid fa-circle-check"/></sapn>
+                        <span className="fw-bolder">{post.userName}{' '}</span>
+                        <FontAwesomeIcon icon="fa-solid fa-circle-check"/>
                         <span className="text-secondary"> - {post.time}</span>
                     </div>
                     <div className="fw-bolder">

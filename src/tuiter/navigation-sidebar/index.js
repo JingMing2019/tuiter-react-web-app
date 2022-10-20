@@ -21,9 +21,12 @@ const NavigationSidebar = (
             <Link to="/" className="list-group-item">Labs</Link>
             {
                 sidebars.map(sidebar => {
-                return(<NavigationSidebarItem sidebar={sidebar} active={active}/>)
+                return(<NavigationSidebarItem key={sidebar._id} sidebar={sidebar} active={active}/>)
                 })
             }
+            <div className="d-grid mt-2">
+                <button className="btn btn-primary btn-block rounded-pill">Tuit</button>
+            </div>
         </div>
     );
 }

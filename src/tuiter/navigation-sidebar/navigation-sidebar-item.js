@@ -11,7 +11,7 @@ const NavigationSideBarItem = ({
         iconSub: "",
         name: ""
     },
-    active = "home"
+    active = ""
 }) => {
     return(
         <Link to={`/tuiter/${sidebar.name}`} className={`list-group-item ${sidebar.name && active === sidebar.name?'active':''}`}>

@@ -1,5 +1,6 @@
 [
     {
+        "_id": 123,
         "stack": false,
         "source": "/",
         "iconMain": "fa-brands fa-twitter",
@@ -7,6 +8,7 @@
         "name": ""
     },
     {
+        "_id": 234,
         "stack": false,
         "source": "../HomeScreen/index.html",
         "iconMain": "fa-solid fa-home",
@@ -14,6 +16,7 @@
         "name": "home"
     },
     {
+        "_id": 345,
         "stack": false,
         "source": "../ExploreScreen/index.html",
         "iconMain": "fa-solid fa-hashtag",
@@ -21,6 +24,7 @@
         "name": "explore"
     },
     {
+        "_id": 456,
         "stack": false,
         "source": "/",
         "iconMain": "fa-regular fa-bell",
@@ -28,6 +32,7 @@
         "name": "notifications"
     },
     {
+        "_id": 567,
         "stack": false,
         "source": "/",
         "iconMain": "fa-regular fa-envelope",
@@ -35,6 +40,7 @@
         "name": "messages"
     },
     {
+        "_id": 678,
         "stack": false,
         "source": "/",
         "iconMain": "fa-regular fa-bookmark",
@@ -42,6 +48,7 @@
         "name": "bookmarks"
     },
     {
+        "_id": 789,
         "stack": false,
         "source": "/",
         "iconMain": "fa-solid fa-list",
@@ -49,6 +56,7 @@
         "name": "lists"
     },
     {
+        "_id": 890,
         "stack": false,
         "source": "/",
         "iconMain": "fa-regular fa-user",
@@ -56,6 +64,7 @@
         "name": "profile"
     },
     {
+        "_id": 901,
         "stack": true,
         "source": "/",
         "iconMain": "far fa-circle",
