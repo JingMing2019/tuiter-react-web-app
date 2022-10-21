@@ -25,16 +25,20 @@ const PostHomeListItem = (
         overflow: "hidden",
         "borderRadius": "1rem 1rem 0 0"
     }
-    // Mark part of the title text as blue
 
-    let title = post.title;
-    let newTitle = title.replace(post.markText, `'<span class="text-primary">' + post.markText + '</span>'`);
+    const markKeywordAsLink = (item, keyword) => {
+        let re = new RegExp(keyword, 'g')
+        return (
+            item.replace(re, '<a href="/#" class="text-decoration-none text-primary">'+ keyword +'</a>')
+        )
+    }
+
     // Hiding post body when there is no post title and post content, and edit post image rounded corner accordingly
-    let postImageClass = "rounded-4" ;
-    let postBodyClass = "d-none";
+    let postImage = <img src={post.postImage} className="w-100 rounded-4" alt="Post"/>;
+    let postBody = false;
     if (post.postTitle || post.postContent) {
-        postImageClass = {roundedTop};
-        postBodyClass = "border-top border-light px-3 py-3";
+        postImage = <img src={post.postImage} className="w-100" style={roundedTop} alt="Post"/>;
+        postBody = true;
     }
     return(
         <div className="list-group-item pt-3 wd-post-list-item border border-light">
@@ -56,20 +60,21 @@ const PostHomeListItem = (
                         </div>
                     </div>
                     {/* Post Title */}
-                    <div>
-                        {newTitle}
-                    </div>
+                    {/* like innerHTML in the browser*/}
+                    <div dangerouslySetInnerHTML={{__html: markKeywordAsLink(post.title, post.markText)}}/>
                     {/* Inner Post */}
-                    <div className="border border-light border-2 rounded-4 my-3">
-                        <img src={post.postImage} className={`w-100 ${postImageClass}`} alt="Post"/>
-                        <div className={postBodyClass}>
-                            <h6 className="mb-0">{post.postTitle}</h6>
-                            <p className="text-secondary mb-0">{post.postContent}</p>
-                            <a href={post.postLink} className="text-secondary text-decoration-none">
-                                <FontAwesomeIcon icon="fa-solid fa-link"/>
-                                {post.postLinkName}
-                            </a>
-                        </div>
+                    <div className="border rounded-4 my-3">
+                        {postImage}
+                        {postBody &&
+                            <div className="border-top px-3 py-3">
+                                <h6 className="mb-0">{post.postTitle}</h6>
+                                <p className="text-secondary mb-0">{post.postContent}</p>
+                                <a href={post.postLink} className="text-secondary text-decoration-none">
+                                    <FontAwesomeIcon icon="fa-solid fa-link"/>
+                                    {post.postLinkName}
+                                </a>
+                            </div>
+                        }
                     </div>
                     {/* Bottom Icons */}
                     <div className="row mb-2">
