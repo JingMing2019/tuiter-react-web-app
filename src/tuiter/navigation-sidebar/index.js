@@ -21,7 +21,9 @@ const NavigationSidebar = (
             <Link to="/" className="list-group-item">Labs</Link>
             {
                 sidebars.map(sidebar => {
-                return(<NavigationSidebarItem key={sidebar._id} sidebar={sidebar} active={active}/>)
+                return(
+                    // If the path is /tuiter, then active home link
+                    <NavigationSidebarItem key={sidebar._id} sidebar={sidebar} active={active ? active : "home"}/>)
                 })
             }
             <div className="d-grid mt-2">

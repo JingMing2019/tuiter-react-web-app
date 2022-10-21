@@ -14,7 +14,9 @@ const NavigationSideBarItem = ({
     active = ""
 }) => {
     return(
-        <Link to={`/tuiter/${sidebar.name}`} className={`list-group-item ${sidebar.name && active === sidebar.name?'active':''}`}>
+        // If the sidebar is the twitter, it does not have the name and redirect it to /home route.
+        <Link to={`/tuiter/${!sidebar.name ? "home" : sidebar.name}`}
+              className={`list-group-item ${sidebar.name && active === sidebar.name?'active':''}`}>
             <div className="row">
                 <div className="col-xl-2">
                     {/* If sidebar icon is not stack, simply call FontAwesomeIcon function */}

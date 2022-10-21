@@ -52,7 +52,7 @@ const PostHomeListItem = (
                     <div className="row align-items-center">
                         <div className="col-11">
                             {post.userName}{' '}
-                            <FontAwesomeIcon icon="fa-solid fa-circle-check"/>
+                            <FontAwesomeIcon icon="fa-solid fa-circle-check" className="text-primary"/>
                             <span className="text-secondary">{' '}@{post.userHandle} {'\u00B7'} {post.time}</span>
                         </div>
                         <div className="col-1">
