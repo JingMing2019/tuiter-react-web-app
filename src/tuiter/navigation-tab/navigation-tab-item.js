@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 const NavigationTabItem = (
     {
         tab = {
-            "hyperlink": "for-you.html",
             "name": "for you",
             "last": false
         },

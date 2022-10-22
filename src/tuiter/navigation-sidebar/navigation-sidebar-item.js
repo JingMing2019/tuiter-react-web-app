@@ -6,7 +6,6 @@ import StackIcon from "./stack-icon";
 const NavigationSideBarItem = ({
     sidebar = {
         stack: false,
-        source: "/",
         iconMain: "fa-brands fa-twitter",
         iconSub: "",
         name: ""

@@ -1,7 +1,8 @@
 import React from "react";
-import PostSummaryList from "../post-summary-list";
 import "./index.css";
 import NavigationTab from "../navigation-tab";
+import ForYou from "./for-you";
+import {Route, Routes} from "react-router";
 
 const ExploreComponent = () => {
     return(
@@ -16,12 +17,11 @@ const ExploreComponent = () => {
                     <i className="wd-bottom-4 text-primary float-end bi bi-gear-fill fs-2 position-relative"/>
                 </div>
             </div>
-            <NavigationTab active={"for you"}/>
-            <div className="position-relative mb-2">
-                <img src="../images/spacex-starship-mk1.webp" className="w-100" alt={"title"}/>
-                <h1 className="position-absolute wd-nudge-up text-white">SpaceX Starship</h1>
-            </div>
-            <PostSummaryList/>
+            <NavigationTab/>
+            <Routes>
+                <Route index element={<ForYou/>}/>
+                <Route path="/for-you" element={<ForYou/>}/>
+            </Routes>
         </>
     );
 };

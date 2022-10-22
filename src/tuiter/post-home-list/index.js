@@ -6,7 +6,7 @@ const PostHomeList = () => {
         <div className="list-group">
             {
                 posts.map(post => {
-                    return(<PostHomeListItem post={post}/>)
+                    return(<PostHomeListItem key={post._id} post={post}/>)
                 })
             }
         </div>

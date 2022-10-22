@@ -10,7 +10,7 @@ const NavigationTab = () => {
         <ul className="nav nav-pills mb-2 mt-2">
             {
                 tabs.map(tab => {
-                return(<NavigationTabItem key={tab._id} tab={tab} active={active}/>)
+                return(<NavigationTabItem key={tab._id} tab={tab} active={active ? active : "for-you"}/>)
                 })
             }
         </ul>

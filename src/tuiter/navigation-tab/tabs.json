@@ -1,31 +1,26 @@
 [
   {
     "_id": 123,
-    "hyperlink": "for-you.html",
     "name": "for-you",
     "last": false
   },
   {
     "_id": 234,
-    "hyperlink": "trending.html",
     "name": "trending",
     "last": false
   },
   {
     "_id": 345,
-    "hyperlink": "news.htm",
     "name": "news",
     "last": false
   },
   {
     "_id": 456,
-    "hyperlink": "sports.html",
     "name": "sports",
     "last": false
   },
   {
     "_id": 567,
-    "hyperlink": "entertainment.html",
     "name": "entertainment",
     "last": true
   }
