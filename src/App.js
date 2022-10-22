@@ -28,13 +28,10 @@ function App() {
                   {/* Route component from React Router to declare paths and map them to corresponding component we want
                   to render for that path*/}
                   {/* index means this Labs component is the default landing screen */}
-                  <Route index element={<Labs/>}/>
-              </Routes>
-              <Routes>
-                  <Route path="/hello" element={<HelloWorld/>}/>
-              </Routes>
-              <Routes>
-                  <Route path="/tuiter/*" element={<Tuiter/>}/>
+                  {/* Put All route under the same routes, and there always has a '/' path or index */}
+                  <Route index element={<Labs />}/>
+                  <Route path="/hello" element={<HelloWorld />}/>
+                  <Route path="/tuiter/*" element={<Tuiter />}/>
               </Routes>
           </div>
       </BrowserRouter>
