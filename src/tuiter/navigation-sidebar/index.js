@@ -17,7 +17,7 @@ const NavigationSidebar = (
     return(
         // The HTML class attribute is commonly used to associate CSS transformation rules to an HTML element.
         // In JavaScript class is a keyword so we can't use it, use className instead
-        <div className="list-group">
+        <div className="list-group sticky-top">
             <Link to="/" className="list-group-item">Labs</Link>
             {
                 sidebars.map(sidebar => {
