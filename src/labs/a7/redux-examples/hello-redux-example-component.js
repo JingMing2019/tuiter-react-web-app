@@ -2,9 +2,11 @@ import React from "react"
 import {useSelector} from "react-redux";
 
 const HelloReduxExampleComponent = () => {
-    const message = useSelector((hello) => hello.message) // extract 'Hello World' from reducer
+    // const message = useSelector((hello) => hello.message) // extract 'Hello World' from reducer
+    // now hello is bounded with todos. The state of each reducer is now accessible through these properties
+    const message = useSelector((state) => state.hello.message);
     return(
-        <h3>{message}</h3>
+        <h1>{message}</h1>
     )
 }
 
