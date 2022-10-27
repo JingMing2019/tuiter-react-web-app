@@ -2,7 +2,7 @@
 import React, {useState} from "react"
 // React useDispatch hook send the new state to the reducer
 import {useDispatch, useSelector} from "react-redux";
-import {addTodo, deleteTodo} from "./reducers/todos-reducer";
+import {addTodo, deleteTodo, todoDoneToggle} from "./reducers/todos-reducer";
 
 const Todos = () => {
     // Retrieve todos from reducer state and assign to local todos constant
@@ -13,6 +13,12 @@ const Todos = () => {
 
     // get dispatcher to invoke reducer functions
     const dispatch = useDispatch()
+
+    // handle checkbox click event, accept todo_ index,  send index to reducer function
+    // passing index of todo_ to toggle done field
+    const toggleTodoDone = (todo) => {
+        dispatch(todoDoneToggle(todo))
+    }
 
     // handle delete button click, accepts index dispatch event to deleteTodo reducer function
     // passing index which we want to delete
@@ -57,6 +63,9 @@ const Todos = () => {
                             only delete once */}
                             <button onClick={() => deleteTodoClickHandler(index)}
                                     className="btn btn-danger float-end ms-2">Delete</button>
+                            {/* new checkbox which is checked if todo_.done is true.
+                            if user changes checkbox, we'll pass the todo_ to reducer function to update todo_'s state*/}
+                            <input type="checkbox" checked={todo.done} onChange={() => toggleTodoDone(todo)} className="me-2"/>
                             {todo.do}
                         </li>
                     )

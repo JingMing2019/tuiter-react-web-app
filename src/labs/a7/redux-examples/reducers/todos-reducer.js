@@ -36,11 +36,15 @@ const todosSlice = createSlice({
             const index = action.payload
             // delete from index and delete 1 object
             state.splice(index, 1)
+        },
+        todoDoneToggle(state, action) {
+            const todo = state.find((todo) => todo._id === action.payload._id)
+            todo.done = !todo.done
         }
     }
 });
 
 // export actions so we can call them from UI
-export const {addTodo, deleteTodo} = todosSlice.actions
+export const {addTodo, deleteTodo, todoDoneToggle} = todosSlice.actions
 
 export default todosSlice.reducer
