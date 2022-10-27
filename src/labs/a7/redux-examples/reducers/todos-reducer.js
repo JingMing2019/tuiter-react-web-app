@@ -30,11 +30,17 @@ const todosSlice = createSlice({
                 do: action.payload.do,
                 done: false
             })
+        },
+        // deleteTodo function extracts index from action's payload and uses it to splice out the todo_ to be deleted
+        deleteTodo(state, action) {
+            const index = action.payload
+            // delete from index and delete 1 object
+            state.splice(index, 1)
         }
     }
 });
 
 // export actions so we can call them from UI
-export const {addTodo} = todosSlice.actions
+export const {addTodo, deleteTodo} = todosSlice.actions
 
 export default todosSlice.reducer

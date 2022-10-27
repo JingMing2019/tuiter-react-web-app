@@ -2,7 +2,7 @@
 import React, {useState} from "react"
 // React useDispatch hook send the new state to the reducer
 import {useDispatch, useSelector} from "react-redux";
-import {addTodo} from "./reducers/todos-reducer";
+import {addTodo, deleteTodo} from "./reducers/todos-reducer";
 
 const Todos = () => {
     // Retrieve todos from reducer state and assign to local todos constant
@@ -13,6 +13,12 @@ const Todos = () => {
 
     // get dispatcher to invoke reducer functions
     const dispatch = useDispatch()
+
+    // handle delete button click, accepts index dispatch event to deleteTodo reducer function
+    // passing index which we want to delete
+    const deleteTodoClickHandler = (index) => {
+        dispatch(deleteTodo(index))
+    }
 
     // handles the click event of button `Create`
     const createTodoClickHandler = () => {
@@ -44,8 +50,13 @@ const Todos = () => {
                     <input onChange={todoChangeHandler} value={todo.do} className="form-control w-75" />
                 </li>
                 {
-                    todos.map(todo =>
-                        <li className="list-group-item">
+                    // Add index parameter
+                    todos.map((todo, index) =>
+                        <li key= {todo._id} className="list-group-item">
+                            {/* Note () => {} because we are passing index parameter otherwise gets into infinite loop
+                            only delete once */}
+                            <button onClick={() => deleteTodoClickHandler(index)}
+                                    className="btn btn-danger float-end ms-2">Delete</button>
                             {todo.do}
                         </li>
                     )
