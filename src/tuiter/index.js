@@ -8,6 +8,7 @@ import {Routes, Route} from "react-router";
 
 // 1: import the reducer
 import whoReducer from "./reducers/who-reducer";
+import tuitsReducer from "./tuits/tuits-reducer";
 // 2: import configureStore
 import { configureStore } from '@reduxjs/toolkit';
 // 3: import the Provider component
@@ -15,7 +16,7 @@ import {Provider} from "react-redux";
 // 4: configure the store
 const store = configureStore(
     {
-        reducer: {who: whoReducer}
+        reducer: {who: whoReducer, tuits: tuitsReducer}
     });
 
 function Tuiter() {
