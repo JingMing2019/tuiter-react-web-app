@@ -7,7 +7,7 @@ import {BrowserRouter} from "react-router-dom";
 import {Routes, Route} from "react-router";
 
 import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas, faHome, faHashtag, faEllipsis, faList, faCircleCheck, faGear, faRetweet, faArrowUpFromBracket, faLink } from '@fortawesome/free-solid-svg-icons'
+import { fas, faHome, faHashtag, faEllipsis, faList, faCircleCheck, faGear, faRetweet, faArrowUpFromBracket, faLink} from '@fortawesome/free-solid-svg-icons'
 import { far, faBell, faEnvelope, faBookmark, faUser, faCircle, faComment, faHeart } from '@fortawesome/free-regular-svg-icons'
 import { faTwitter} from '@fortawesome/free-brands-svg-icons'
 
