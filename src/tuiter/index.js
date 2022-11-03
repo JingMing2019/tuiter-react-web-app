@@ -6,9 +6,21 @@ import WhoToFollowList from "./who-to-follow-list";
 import PostSummaryList from "./post-summary-list";
 import {Routes, Route} from "react-router";
 
+// 1: import the reducer
+import whoReducer from "./reducers/who-reducer";
+// 2: import configureStore
+import { configureStore } from '@reduxjs/toolkit';
+// 3: import the Provider component
+import {Provider} from "react-redux";
+// 4: configure the store
+const store = configureStore(
+    {
+        reducer: {who: whoReducer}
+    });
+
 function Tuiter() {
     return(
-        <div>
+        <Provider store = {store}>
             <h1>Tuiter</h1>
             <div className="row mt-2">
                 <div className="col-2 col-md-2 col-lg-1 col-xl-2">
@@ -29,7 +41,7 @@ function Tuiter() {
                     </Routes>
                 </div>
             </div>
-        </div>
+        </Provider>
     )
 }
 
