@@ -3,7 +3,6 @@ import NavigationSidebar from "./navigation-sidebar";
 import HomeComponent from "./home";
 import ExploreComponent from "./explore";
 import WhoToFollowList from "./who-to-follow-list";
-import PostSummaryList from "./post-summary-list";
 import {Routes, Route} from "react-router";
 
 // 1: import the reducer
@@ -39,8 +38,10 @@ function Tuiter() {
                 </div>
                 <div className="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
                     <Routes>
-                        <Route index element={<PostSummaryList sidebar={true}/>}/>
-                        <Route path="/home"    element={<PostSummaryList sidebar={true}/>}/>
+                        <Route index element={<WhoToFollowList/>}/>
+                        <Route path="/home"    element={<WhoToFollowList/>}/>
+                        {/*<Route index element={<PostSummaryList sidebar={true}/>}/>*/}
+                        {/*<Route path="/home"    element={<PostSummaryList sidebar={true}/>}/>*/}
                         <Route path="/explore/*" element={<WhoToFollowList/>}/>
                         <Route path="/profile" element={<WhoToFollowList/>}/>
                     </Routes>

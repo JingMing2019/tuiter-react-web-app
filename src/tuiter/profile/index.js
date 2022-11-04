@@ -1,5 +1,6 @@
 import React from "react";
 import {useSelector} from "react-redux";
+import {useNavigate} from "react-router";
 
 const ProfileComponent = () => {
     const profile = useSelector(state => state.profile)
@@ -12,12 +13,20 @@ const ProfileComponent = () => {
         "marginTop" : "-80px",
         "left" : "16px"
     }
+
+    const bornDate = new Date(profile.dateOfBirth).toLocaleString('en-CA', {month: 'short', day: 'numeric', year: 'numeric'});
+
+    const [month, year] = profile.dateJoined.split("/");
+    const joinedDate = new Date(parseInt(year), parseInt(month)).toLocaleString('en-CA', {month: 'long', year: 'numeric'});
+
+    const  navigate = useNavigate();
+
     return(
         <>
             {/* Username and back button */}
             <div className="row align-items-center">
                 <div className="col-auto">
-                    <button type="button" className="btn" title="back">
+                    <button type="button" className="btn" title="back" onClick={() => navigate(-1)}>
                         <i className="bi bi-arrow-left" />
                     </button>
                 </div>
@@ -51,11 +60,11 @@ const ProfileComponent = () => {
                     <span className="pe-3">
                         {/* TODO: convert date format */}
                         <i className="bi bi-balloon pe-2" />
-                        Born {profile.dateOfBirth}
+                        Born {bornDate}
                     </span>
                     <span className="pe-3">
                         <i className="bi bi-calendar3 pe-2" />
-                        Joined {profile.dateJoined}
+                        Joined {joinedDate}
                     </span>
                 </div>
                 {/* Following and Followers */}
