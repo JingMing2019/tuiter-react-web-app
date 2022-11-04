@@ -1,12 +1,13 @@
-import PostHomeList from "../post-home-list";
+// import PostHomeList from "../post-home-list";
 import TuitsList from "../tuits-list";
-
+import WhatsHappening from "./whats-happening";
 
 const HomeComponent = () => {
     return(
         // <PostHomeList/> A6-home
         <div>
-            <h1>Home</h1>
+            <h4>Home</h4>
+            <WhatsHappening/>
             <TuitsList />
         </div>
     )

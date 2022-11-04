@@ -20,7 +20,7 @@ const TuitsListItem = (
     }
 ) => {
     return(
-        <div className="list-group-item pt-3 wd-post-list-item border border-light">
+        <div className="list-group-item pt-3 wd-post-list-item border-1">
             <div className="row">
                 {/* Left Avatar */}
                 <div className="col-1">
