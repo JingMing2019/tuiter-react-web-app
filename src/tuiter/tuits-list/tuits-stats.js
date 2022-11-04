@@ -3,7 +3,7 @@ import { faHeart } from "@fortawesome/free-solid-svg-icons";
 
 const TuitsStats = (
     {
-        tuits = {
+        tuit = {
             _id: 234,
             topic: "Tesla",
             userName: "Tesla",
@@ -23,20 +23,20 @@ const TuitsStats = (
         <>
             <div className="row">
                 <a href="/#" className="col text-secondary text-decoration-none">
-                    <FontAwesomeIcon icon="fa-regular fa-comment" className="pe-2" />
-                    <span>{tuits.replies}</span>
+                    <FontAwesomeIcon icon="fa-regular fa-comment" className="pe-1 pe-sm-2" />
+                    <span>{tuit.replies}</span>
                 </a>
                 <a href="/#" className="col text-secondary text-decoration-none">
-                    <FontAwesomeIcon icon="fa-solid fa-retweet" className="pe-2" />
-                    <span>{tuits.retuits}</span>
+                    <FontAwesomeIcon icon="fa-solid fa-retweet" className="pe-1 pe-sm-2" />
+                    <span>{tuit.retuits}</span>
                 </a>
                 <a href="/#" className="col text-secondary text-decoration-none">
-                    {tuits.liked && <FontAwesomeIcon icon={faHeart} color={ 'red' } className="pe-2" />}
-                    {!tuits.liked && <FontAwesomeIcon icon="fa-regular fa-heart" className="pe-2" />}
-                    <span>{tuits.likes}</span>
+                    {tuit.liked && <FontAwesomeIcon icon={faHeart} color={ 'red' } className="pe-1 pe-sm-2" />}
+                    {!tuit.liked && <FontAwesomeIcon icon="fa-regular fa-heart" className="pe-1 pe-sm-2" />}
+                    <span>{tuit.likes}</span>
                 </a>
                 <a href="/#" className="col text-secondary text-decoration-none">
-                    <FontAwesomeIcon icon="fa-solid fa-arrow-up-from-bracket" className="pe-2" />
+                    <FontAwesomeIcon icon="fa-solid fa-arrow-up-from-bracket" className="pe-1 pe-sm-2" />
                 </a>
             </div>
         </>

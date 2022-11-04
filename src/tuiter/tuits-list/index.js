@@ -8,7 +8,7 @@ const TuitsList = () => {
         <div className="list-group">
             {
                 tuits.map(tuit => {
-                    return(<TuitsListItem key={tuit._id} tuits={tuit}/>)
+                    return(<TuitsListItem key={tuit._id} tuit={tuit}/>)
                 })
             }
         </div>

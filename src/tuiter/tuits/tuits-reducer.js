@@ -31,11 +31,16 @@ const tuitsSlice = createSlice(
                     ...templateTuit,
                     _id: (new Date()).getTime(),
                 })
+            },
+            // reducer function to delete tuit looks up index of tuit from state comparing each tuit's ID
+            // with action's payload, then splices tuit from state
+            deleteTuit(state, action) {
+                const index = state.findIndex(tuit => tuit._id === action.payload);
+                state.splice(index, 1);
             }
         }
-
     }
 );
 
-export const {createTuit} = tuitsSlice.actions;
+export const {createTuit, deleteTuit} = tuitsSlice.actions;
 export default tuitsSlice.reducer;

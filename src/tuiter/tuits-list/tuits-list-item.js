@@ -1,9 +1,11 @@
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import TuitsStats from "./tuits-stats";
+import {useDispatch} from "react-redux";
+import {deleteTuit} from "../tuits/tuits-reducer";
 
 const TuitsListItem = (
     {
-        tuits = {
+        tuit = {
             _id: 234,
             topic: "Tesla",
             userName: "Tesla",
@@ -19,32 +21,33 @@ const TuitsListItem = (
         }
     }
 ) => {
+    const dispatch = useDispatch();
+    const deleteTuitHandler = (id) => {
+        dispatch(deleteTuit(id));
+    }
+
     return(
         <div className="list-group-item pt-3 wd-post-list-item border-1">
             <div className="row">
                 {/* Left Avatar */}
-                <div className="col-1">
-                    <img src={`/images/${tuits.image}`} className="rounded-circle" width="48px" alt="avatar"/>
+                <div className="col-auto">
+                    <img src={`/images/${tuit.image}`} className="rounded-circle" width="48px" alt="avatar"/>
                 </div>
                 {/* Right Content */}
-                <div className="col-11 ps-4">
+                <div className="col-10">
                     {/* User's name handle and post time */}
-                    <div className="row align-items-center">
-                        <div className="col-11">
-                            <span className="fw-bolder">{tuits.userName}{' '}</span>
-                            <FontAwesomeIcon icon="fa-solid fa-circle-check" className="text-primary"/>
-                            <span className="text-secondary">{' '}{tuits.handle} {'\u00B7'} {tuits.time}</span>
-                        </div>
-                        <div className="col-1">
-                            <FontAwesomeIcon icon="fa-solid fa-ellipsis" className="text-secondary float-end"/>
-                        </div>
+                    <div>
+                        <i className="bi bi-x-lg float-end" onClick={() => deleteTuitHandler(tuit._id)} />
+                        <span className="fw-bolder">{tuit.userName}{' '}</span>
+                        <FontAwesomeIcon icon="fa-solid fa-circle-check" className="text-primary"/>
+                        <span className="text-secondary">{' '}{tuit.handle} {'\u00B7'} {tuit.time}</span>
                     </div>
                     {/* Tuit */}
                     <div className="mb-4">
-                        {tuits.tuit}
+                        {tuit.tuit}
                     </div>
                     {/* Bottom Icons */}
-                    <TuitsStats tuits={tuits}/>
+                    <TuitsStats tuit={tuit}/>
                 </div>
             </div>
         </div>
