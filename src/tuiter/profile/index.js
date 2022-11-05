@@ -1,12 +1,13 @@
 import React from "react";
 import {useSelector} from "react-redux";
 import {useNavigate} from "react-router";
+import {Link} from "react-router-dom";
 
 const ProfileComponent = () => {
     const profile = useSelector(state => state.profile)
 
     const font_size = {
-        "fontSize": "13px"
+        "fontSize": "12px"
     }
 
     const nudge_up = {
@@ -24,7 +25,7 @@ const ProfileComponent = () => {
     return(
         <>
             {/* Username and back button */}
-            <div className="row align-items-center">
+            <div className="row align-items-center justify-content-start">
                 <div className="col-auto">
                     <button type="button" className="btn" title="back" onClick={() => navigate(-1)}>
                         <i className="bi bi-arrow-left" />
@@ -33,14 +34,14 @@ const ProfileComponent = () => {
                 <div className="col-10">
                     <h5 className="fw-bold mb-0">{profile.firstName}{" "}{profile.lastName}</h5>
                     <div className="text-secondary" style={font_size}>
-                        {profile.tuits}{" "}Tuits
+                        {Number(profile.tuits).toLocaleString()}{" "}Tuits
                     </div>
                 </div>
             </div>
             {/* banner picture and avatar */}
             <img src={`/images/${profile.bannerPicture}`} className="w-100" height="250" alt="banner" />
             <img src={`/images/${profile.profilePicture}`} className="rounded-circle img-thumbnail position-relative mb-2" style={nudge_up} width={160} alt="banner" />
-            <button type="button" className="border border-gray px-3 py-2 bg-white rounded-pill float-end my-3 mx-3 fw-bold">Edit Profile</button>
+            <Link to="/tuiter/edit-profile" type="button" className="float-end border border-gray rounded-pill px-3 py-2 text-decoration-none bg-white text-black fw-bold my-3 mx-3">Edit Profile</Link>
             <div className="px-3">
                 {/* User Name */}
                 <h5 className="fw-bold mb-0 mt-3 ">{profile.firstName}{" "}{profile.lastName}</h5>
@@ -58,7 +59,6 @@ const ProfileComponent = () => {
                         {profile.location}
                     </span>
                     <span className="pe-3">
-                        {/* TODO: convert date format */}
                         <i className="bi bi-balloon pe-2" />
                         Born {bornDate}
                     </span>
@@ -70,11 +70,11 @@ const ProfileComponent = () => {
                 {/* Following and Followers */}
                 <div className="mt-2">
                     <span className="pe-3">
-                        <span className="fw-bold">{profile.followingCount}{" "}</span>
+                        <span className="fw-bold">{Number(profile.followingCount).toLocaleString()}{" "}</span>
                         <span className="text-secondary">Following</span>
                     </span>
                     <span className="pe-3">
-                        <span className="fw-bold">{profile.followersCount}{" "}</span>
+                        <span className="fw-bold">{Number(profile.followersCount).toLocaleString()}{" "}</span>
                         <span className="text-secondary">Followers</span>
                     </span>
                 </div>

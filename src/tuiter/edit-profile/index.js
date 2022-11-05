@@ -1,0 +1,135 @@
+import React, {useState} from "react";
+import {useSelector} from "react-redux";
+import {Link} from "react-router-dom";
+import {useDispatch} from "react-redux";
+import {updateUser} from "../reducers/profile-reducer";
+import './index.css'
+
+const EditProfileComponent = () => {
+    const profile = useSelector(state => state.profile)
+
+    const font_size = {
+        "fontSize" : "14px",
+    }
+
+    const nudge_up = {
+        "marginTop" : "-80px",
+        "left" : "16px"
+    }
+
+    let [userName, setUserName] = useState(profile.firstName + " " + profile.lastName);
+    let [bio, setBio] = useState(profile.bio);
+    let [location, setLocation] = useState(profile.location);
+    let [website, setWebsite] = useState(profile.website);
+    let [dateOfBirth, setDateOfBirth] = useState(profile.dateOfBirth);
+
+    const dispatch = useDispatch();
+
+    const saveClickHandler = () => {
+        const newFirstName = userName.split(" ")[0];
+        console.log(dateOfBirth)
+        const userInfo = {
+            firstName: newFirstName,
+            lastName: userName.slice(newFirstName.length + 1),
+            bio: bio,
+            location: location,
+            website: website,
+            dateOfBirth: dateOfBirth,
+        }
+        dispatch(updateUser(userInfo));
+    }
+
+    // convert yyyy-MM-dd to MM/dd/yyyy
+    const formatDateMM_dd_yyyy = (inputDate) => {
+        const [year, month, date] = inputDate.split("-")
+        return month + '/' + date+ '/' + year;
+    }
+
+    // convert MM/dd/yyyy to yyyy-MM-dd
+    const formatDateYYYY_MM_dd = (inputDate) => {
+        return new Date(inputDate).toISOString().split('T')[0]
+    }
+
+    // convert MM/dd/yyyy to MMM DD YYYY
+    const formatDateMMMDDYYYY = (inputDate) => {
+        return new Date(inputDate).toLocaleString('en-CA', {month: 'short', day: 'numeric', year: 'numeric'});
+    }
+
+    const [edit, setEdit] = useState(true)
+
+    return(
+        <>
+            {/* Edit profile and back button */}
+            <div className="row align-items-center justify-content-start pb-1">
+                <div className="col-auto">
+                    <Link to="/tuiter/profile" className="btn" title="cancel" >
+                        <i className="bi bi-x-lg" />
+                    </Link>
+                </div>
+                <div className="col-10">
+                    <span className="fs-5 fw-bold">Edit Profile</span>
+                    <Link to="/tuiter/profile" className="btn btn-dark btn-sm rounded-pill position-relative float-end px-3 fw-bold" onClick={saveClickHandler}>Save</Link>
+                </div>
+            </div>
+            {/* banner picture and avatar TODO: darken */}
+            <img src={`/images/${profile.bannerPicture}`} className="w-100" height="250" alt="banner" />
+            <img src={`/images/${profile.profilePicture}`} className="rounded-circle img-thumbnail position-relative mb-2" style={nudge_up} width={160} alt="banner" />
+            <div className="px-3">
+                {/* Change Name */}
+                <div className="border w-100 rounded-1 mt-2" >
+                    <label className="wd-input-label text-secondary">Name</label>
+                    <input type="text"
+                           className="form-control border-0 pt-0"
+                           defaultValue={userName}
+                           onChange={(event) => setUserName(event.target.value)} />
+                </div>
+                {/* Change Bio */}
+                <div className="border w-100 rounded-1 mt-4">
+                    <label className="wd-input-label text-secondary">Bio</label>
+                    <textarea rows={5}
+                              className="form-control border-0 pt-0"
+                              value={bio}
+                              onChange={(event) => setBio(event.target.value)} />
+                </div>
+                {/* Change Location */}
+                <div className="border w-100 rounded-1 mt-4" >
+                    <label className="wd-input-label text-secondary">Location</label>
+                    <input type="text"
+                           className="form-control border-0 pt-0"
+                           defaultValue={location}
+                           onChange={(event) => setLocation(event.target.value)} />
+                </div>
+                {/* Change Website */}
+                <div className="border w-100 rounded-1 mt-4" >
+                    <label className="wd-input-label text-secondary">Website</label>
+                    <input type="text"
+                           className="form-control border-0 pt-0"
+                           defaultValue={website}
+                           onChange={(event) => setWebsite(event.target.value)} />
+                </div>
+                {/* Change Birth Date */}
+                <div className="mt-4">
+                    <div className="text-secondary" style={font_size}>
+                        Birth Date {'\u00B7'}
+                        {edit && <button className="border-0 text-primary bg-transparent" onClick={() => setEdit(false)}>Edit</button>}
+                        {!edit && <button className="border-0 text-primary bg-transparent" onClick={() => setEdit(true)}>Cancel</button>}
+                    </div>
+                    {edit && <div className="pt-1">{formatDateMMMDDYYYY(dateOfBirth)}</div>}
+                    {!edit &&
+                        <input type="date"
+                               className="form-control"
+                               defaultValue={formatDateYYYY_MM_dd(dateOfBirth)}
+                               onChange={(event) => setDateOfBirth(formatDateMM_dd_yyyy(event.target.value))}
+                        />
+                    }
+                </div>
+                {/* Switch to Professional */}
+                <div className="fw-bold mt-4 text-dark">
+                    Switch to professional
+                    <span className="float-end"><i className="bi bi-chevron-right"/></span>
+                </div>
+            </div>
+        </>
+    );
+};
+export default EditProfileComponent;

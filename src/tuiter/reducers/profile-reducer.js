@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const profile =   {
+const profile = {
     firstName: "Pembroke",
     lastName: "Welsh Corgi",
     handle: "@pembrokewelshcorgi",
@@ -11,16 +11,27 @@ const profile =   {
     location: "San Jose, CA",
     dateOfBirth: "9/9/1999",
     dateJoined: "9/2010",
-    followingCount: 1000,
-    followersCount: 2000,
-    tuits: 6000
+    followingCount: 1234,
+    followersCount: 5678,
+    tuits: 6138
 }
 
 const profileSlice = createSlice(
     {
         name: 'profile',
-        initialState: profile
+        initialState: profile,
+        reducers: {
+            updateUser(state, action) {
+                state.firstName = action.payload.firstName;
+                state.lastName = action.payload.lastName;
+                state.bio = action.payload.bio;
+                state.location = action.payload.location;
+                state.website = action.payload.website;
+                state.dateOfBirth = action.payload.dateOfBirth;
+            }
+        }
     }
 );
 
+export const {updateUser} = profileSlice.actions;
 export default profileSlice.reducer;
