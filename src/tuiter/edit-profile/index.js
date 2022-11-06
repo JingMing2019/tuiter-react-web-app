@@ -12,10 +12,31 @@ const EditProfileComponent = () => {
         "fontSize" : "14px",
     }
 
-    const nudge_up = {
-        "marginTop" : "-80px",
-        "left" : "16px"
+    const darken_image = {
+        "filter" : "brightness(70%)",
     }
+
+    const nudge_up_avatar = {
+        ...darken_image,
+        "marginTop" : "-107px",
+        "left" : "16px",
+    }
+
+    const nudge_up_icon_1 = {
+        "top" : "-100px",
+        "left" : "40%",
+    }
+
+    const nudge_up_icon_2 = {
+        "top" : "-100px",
+        "left" : "50%",
+    }
+
+    const nudge_up_icon_3 = {
+        "top" : "-55px",
+        "left" : "-80px",
+    }
+
 
     let [userName, setUserName] = useState(profile.firstName + " " + profile.lastName);
     let [bio, setBio] = useState(profile.bio);
@@ -72,8 +93,16 @@ const EditProfileComponent = () => {
                 </div>
             </div>
             {/* banner picture and avatar TODO: darken */}
-            <img src={`/images/${profile.bannerPicture}`} className="w-100" height="250" alt="banner" />
-            <img src={`/images/${profile.profilePicture}`} className="rounded-circle img-thumbnail position-relative mb-2" style={nudge_up} width={160} alt="banner" />
+            <div>
+                <img src={`/images/${profile.bannerPicture}`} className="w-100" style={darken_image} height="200" alt="banner" />
+                <button className="position-relative border border-0 rounded-circle btn-lg bg-dark bg-opacity-75 text-white" style={nudge_up_icon_1}><i className="bi bi-camera"/></button>
+                <button className="position-relative border border-0 rounded-circle btn-lg bg-dark bg-opacity-75 text-white" style={nudge_up_icon_2}><i className="bi bi-x-lg"/></button>
+            </div>
+            <div>
+                <img src={`/images/${profile.profilePicture}`} className="rounded-circle img-thumbnail position-relative mb-2" style={nudge_up_avatar} width={160} alt="avatar" />
+                <button className="position-relative border border-0 rounded-circle btn-lg bg-dark bg-opacity-75 text-white" style={nudge_up_icon_3}><i className="bi bi-camera"/></button>
+            </div>
+
             <div className="px-3">
                 {/* Change Name */}
                 <div className="border w-100 rounded-1 mt-2" >
@@ -86,7 +115,7 @@ const EditProfileComponent = () => {
                 {/* Change Bio */}
                 <div className="border w-100 rounded-1 mt-4">
                     <label className="wd-input-label text-secondary">Bio</label>
-                    <textarea rows={5}
+                    <textarea rows={3}
                               className="form-control border-0 pt-0"
                               value={bio}
                               onChange={(event) => setBio(event.target.value)} />

@@ -39,7 +39,7 @@ const ProfileComponent = () => {
                 </div>
             </div>
             {/* banner picture and avatar */}
-            <img src={`/images/${profile.bannerPicture}`} className="w-100" height="250" alt="banner" />
+            <img src={`/images/${profile.bannerPicture}`} className="w-100" height="200" alt="banner" />
             <img src={`/images/${profile.profilePicture}`} className="rounded-circle img-thumbnail position-relative mb-2" style={nudge_up} width={160} alt="banner" />
             <Link to="/tuiter/edit-profile" type="button" className="float-end border border-gray rounded-pill px-3 py-2 text-decoration-none bg-white text-black fw-bold my-3 mx-3">Edit Profile</Link>
             <div className="px-3">
