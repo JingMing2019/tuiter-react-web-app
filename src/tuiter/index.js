@@ -35,7 +35,7 @@ function Tuiter() {
                         <Route path="/home"    element={<HomeComponent/>}/>
                         <Route path="/explore/*" element={<ExploreComponent/>}/>
                         <Route path="/profile" element={<ProfileComponent/>}/>
-                        <Route path="/edit-profile" element={<EditProfileComponent />}/>
+                        <Route path="/profile/edit-profile" element={<EditProfileComponent />}/>
                     </Routes>
                 </div>
                 <div className="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
@@ -46,7 +46,7 @@ function Tuiter() {
                         {/*<Route path="/home"    element={<PostSummaryList sidebar={true}/>}/>*/}
                         <Route path="/explore/*" element={<WhoToFollowList/>}/>
                         <Route path="/profile" element={<WhoToFollowList/>}/>
-                        <Route path="/edit-profile" element={<WhoToFollowList/>}/>
+                        <Route path="/profile/edit-profile" element={<WhoToFollowList/>}/>
                     </Routes>
                 </div>
             </div>
