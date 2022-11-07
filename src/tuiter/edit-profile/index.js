@@ -48,10 +48,14 @@ const EditProfileComponent = () => {
 
     const saveClickHandler = () => {
         const newFirstName = userName.split(" ")[0];
-        console.log(dateOfBirth)
+        let newHandle = "@" + userName;
+        newHandle = newHandle.replace(/\s/g, '');
+        newHandle = newHandle.toLowerCase();
+
         const userInfo = {
             firstName: newFirstName,
             lastName: userName.slice(newFirstName.length + 1),
+            handle: newHandle,
             bio: bio,
             location: location,
             website: website,

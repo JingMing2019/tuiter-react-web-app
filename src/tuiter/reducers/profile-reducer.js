@@ -24,6 +24,7 @@ const profileSlice = createSlice(
             updateUser(state, action) {
                 state.firstName = action.payload.firstName;
                 state.lastName = action.payload.lastName;
+                state.handle = action.payload.handle;
                 state.bio = action.payload.bio;
                 state.location = action.payload.location;
                 state.website = action.payload.website;
