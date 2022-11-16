@@ -1,5 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit";
-import tuits from './data/tuits.json';
+// import tuits from './data/tuits.json';
+import {findTuitsThunk} from "../../services/tuits-thunks";
+
+const initialState = {
+    tuits: [],
+    loading: false
+}
+
 
 const currentUser = {
     "userName": "NASA",
@@ -21,7 +28,29 @@ const templateTuit = {
 const tuitsSlice = createSlice(
     {
         name: 'tuits',
-        initialState: tuits,
+        // initialState: tuits,
+        initialState,
+        // define asynchronous reducers
+        extraReducers: {
+            // if request is not yet fulfilled, set loading true so UI can display spinner empty tuits since we are
+            // still fetching them
+            [findTuitsThunk.pending]:
+                (state) => {
+                    state.loading = true
+                    state.tuits = []
+                },
+            //  when we get response, request is fulfilled, we extract/destruct payload from action object, turn off
+            //  loading flag since we have the data, payload has tuits from server and update redux state
+            [findTuitsThunk.fulfilled]:
+                (state, { payload }) => {
+                    state.loading = false
+                    state.tuits = payload
+                },
+            [findTuitsThunk.rejected]:
+                (state) => {
+                    state.loading = false
+                }
+        },
         reducers: {
             createTuit(state, action) {
                 // add createTuit reducer function which appends the new tuit in the payload at the beginning of the
