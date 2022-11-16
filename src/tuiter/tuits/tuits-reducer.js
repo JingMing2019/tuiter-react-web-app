@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // import tuits from './data/tuits.json';
 
 // in a8, we retrieve data from web server apis, import the thunks
-import {findTuitsThunk} from "../../services/tuits-thunks";
+import {deleteTuitsThunk, findTuitsThunk} from "../../services/tuits-thunks";
 
 // initial state has no tuits and loading flag to display spinner
 const initialState = {
@@ -55,6 +55,12 @@ const tuitsSlice = createSlice(
             [findTuitsThunk.rejected]:
                 (state) => {
                     state.loading = false
+                },
+            [deleteTuitsThunk.fulfilled]:
+                // payload from action contains tuit ID to remove
+                (state, { payload }) => {
+                    state.loading = false;
+                    state.tuits = state.tuits.filter(t => t._id !== payload)
                 }
         },
         reducers: {

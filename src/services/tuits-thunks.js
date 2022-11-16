@@ -10,3 +10,11 @@ import * as service from './tuits-service';
 export const findTuitsThunk = createAsyncThunk(
     'tuits/findTuits', async () => await service.findTuits()
 )
+
+export const deleteTuitsThunk = createAsyncThunk(
+    'tuits/deleteTuits', async (tuitId) => {
+        await service.deleteTuit(tuitId);
+        // return tuit ID so we can remove tuit
+        return tuitId;
+    }
+)
