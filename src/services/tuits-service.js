@@ -1,7 +1,16 @@
 // axios library programmatically sends and receives HTTP requests.
 import axios from 'axios';
-// location of HTTP services
-const TUITS_API = 'http://localhost:4000/api/tuits';
+
+// // Remote API: location of HTTP services from remote server on Heroku
+// const TUITS_API = 'https://tuiter-node-server-app-jing.herokuapp.com/api/tuits';
+
+// // Local API: location of HTTP services, test on local
+// const TUITS_API = 'http://localhost:4000/api/tuits';
+
+// Auto switch API: Locally REACT_APP_API_BASE can be set to http://localhost:4000/api, but when the application runs remotely it can
+// instead be set to https://tuiter-node-server-app-jing.herokuapp.com/api.
+const API_BASE = process.env.REACT_APP_API_BASE;
+const TUITS_API = `${API_BASE}/tuits`;
 
 // Declare four common CRUD operations.
 // The functions are all implemented as asynchronous functions that will not block the browser's sole JavaScript thread.
