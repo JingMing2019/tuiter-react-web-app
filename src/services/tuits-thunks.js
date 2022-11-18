@@ -12,7 +12,7 @@ export const findTuitsThunk = createAsyncThunk(
 )
 
 export const deleteTuitsThunk = createAsyncThunk(
-    'tuits/deleteTuits', async (tuitId) => {
+    'tuits/deleteTuit', async (tuitId) => {
         await service.deleteTuit(tuitId);
         // return tuit ID so we can remove tuit
         return tuitId;
@@ -20,5 +20,9 @@ export const deleteTuitsThunk = createAsyncThunk(
 )
 
 export const createTuitThunk = createAsyncThunk(
-    'tuits/createTuits', async (newTuit) => await service.createTuit(newTuit)
+    'tuits/createTuit', async (newTuit) => await service.createTuit(newTuit)
+)
+
+export const updateTuitThunk = createAsyncThunk(
+    'tuits/updateTuit', async (tuit) => await service.updateTuit(tuit)
 )

@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 // import tuits from './data/tuits.json';
 
 // in a8, we retrieve data from web server apis, import the thunks
-import {createTuitThunk, deleteTuitsThunk, findTuitsThunk} from "../../services/tuits-thunks";
+import {createTuitThunk, deleteTuitsThunk, findTuitsThunk, updateTuitThunk} from "../../services/tuits-thunks";
 
 // initial state has no tuits and loading flag to display spinner
 const initialState = {
@@ -63,10 +63,19 @@ const tuitsSlice = createSlice(
                     state.tuits = state.tuits.filter(t => t._id !== payload)
                 },
             [createTuitThunk.fulfilled]:
-                (state, { payload } )=> {
-                    state.loading = false;
+                (state, { payload }) => {
+                    state.loading = false
                     state.tuits.unshift(payload)
-}
+                },
+            [updateTuitThunk.fulfilled]:
+                (state, { payload }) => {
+                    state.loading = false
+                    const updateTuitIndex = state.tuits.findIndex(tuit => tuit._id === payload._id)
+                    state.tuits[updateTuitIndex] = {
+                        ...state.tuits[updateTuitIndex],
+                        ...payload
+                    }
+                }
         },
         reducers: {
             createTuit(state, action) {
