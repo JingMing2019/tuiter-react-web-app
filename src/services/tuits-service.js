@@ -28,7 +28,7 @@ export const findTuits  = async () => {
     // The data in the response is the tuits array sent back from
     // `findTuits` in /tuiter-node-server-app/controllers/tuits/tuits-controller.js
     // and it's embedded in the response's data property.
-    return response.data;
+    return response.data.reverse();
 }
 
 export const deleteTuit = async (tid) => {
